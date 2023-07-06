@@ -9,7 +9,7 @@ const NewbieData = [
     id: 1,
     title: "Qr-code",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/newbie/qrcode",
+    preview: "https://frontend-projects-flame.vercel.app/newbie/qrcode",
     code: "",
     img: qrcode,
     tag: "nb",
@@ -17,7 +17,7 @@ const NewbieData = [
   {
     title: "Four card section",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/newbie/fourcard",
+    preview: "https://frontend-projects-flame.vercel.app/newbie/fourcard",
     code: "",
     img: fourcard,
     tag: "nb",
@@ -26,7 +26,7 @@ const NewbieData = [
   {
     title: "Base apparel coming soon",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/newbie/baseapparel",
+    preview: "https://frontend-projects-flame.vercel.app/newbie/baseapparel",
     code: "",
     img: baseapparel,
     tag: "nb",
