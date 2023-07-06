@@ -1,13 +1,9 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import Newbie from "../screens/newbie";
-import Beginner from "../screens/junior";
-import Intermediate from "../screens/intermediate";
-import Advanced from "../screens/advanced";
+import { Link } from "react-router-dom";
 
 
 const Secondnavbar = () => {
   return (
-    <div className="bg-primary text-secondary">
+    <div className="bg-primary text-secondary -z-10">
         <hr className="text-white" />
         <div className="p-2">
           <ol className="flex justify-evenly text-center">

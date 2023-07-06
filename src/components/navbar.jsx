@@ -19,7 +19,8 @@ function Navbar() {
             <li className="flex items-center hover:text-hoverColor px-4">
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="flex items-center hover:text-hoverColor pe-4">
+            <li className="flex flex-col justify-center items-center hover:text-hoverColor group me-4">
+              Projects
               <Projects/>            
             </li>
             <li className="flex items-center hover:text-hoverColor">

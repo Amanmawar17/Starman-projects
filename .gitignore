@@ -18,6 +18,7 @@ rest-countries-api-with-color-theme-switcher-master
 static-job-listings-master
 url-shortening-api-master
 advice-generator-app-main
+space-tourism-website-main
 
 dist-ssr
 *.local
@@ -32,3 +33,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel

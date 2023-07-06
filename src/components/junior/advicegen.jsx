@@ -2,14 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 
-// function divider(){
-//   if
-// }
-// function handleClick(){
-//   return 
-// }
-
-
 const Advicegen = () => {
   const [advice, setAdvice] = useState("");
   const [isDevice, setDevice] = useState(window.innerWidth < 600)
@@ -23,6 +15,7 @@ const Advicegen = () => {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
+  const handleClick = 
   useEffect(() => {
     fetch("https://api.adviceslip.com/advice")
       .then((response) => response.json())
@@ -36,7 +29,7 @@ const Advicegen = () => {
         <h1 className="text-sm font-semibold text-[#52ffa8]">
           Advice #{advice.id}
         </h1>
-          <p className="text-xl text-[#cee3e9] font-sans font-bold ">
+          <p className="text-xl text-[#cee3e9] font-sans font-bold p-2">
             "{advice.advice}"
           </p>
           {isDevice ? (<span className="mobile">
@@ -61,7 +54,7 @@ const Advicegen = () => {
             </svg>
           </span>)}
       </div>
-      <button className="relative rounded-full bg-[#52ffa8] bottom-8 w-16 h-16 overflow-hidden" onClick={handleClick}>
+      <button className="relative rounded-full bg-[#52ffa8] bottom-8 w-16 h-16 overflow-hidden " onClick={handleClick}>
         <svg
           className="m-auto"
           width="24"

@@ -4,7 +4,7 @@ import fylodark from "../assets/fylodark.jpg";
 
 const JuniorData = [
   {
-    title: "advice generator",
+    title: "Advice generator",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "http://localhost:5173/junior/advicegen",
     code: "",
@@ -13,16 +13,16 @@ const JuniorData = [
     id: 1,
   },
   {
-    title: "devfinder",
+    title: "Devfinder",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "",
+    preview: "http://localhost:5173/junior/devfinder",
     code: "",
     img: "",
     tag: "bi",
     id: 2,
   },
   {
-    title: "fylo landing page",
+    title: "Fylo landing page",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "http://localhost:5173/junior/fylo",
     code: "",
@@ -31,9 +31,9 @@ const JuniorData = [
     id: 3,
   },
   {
-    title: "blogr landing page",
+    title: "Blogr landing page",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "",
+    preview: "http://localhost:5173/junior/blogr",
     code: "",
     img: "",
     tag: "bi",

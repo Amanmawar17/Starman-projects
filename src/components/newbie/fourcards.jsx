@@ -1,27 +1,27 @@
 const Fourcard = () => {
   return (
     <>
-      <main className="text-center h-1/4 p-2 m-2">
-        <h1 className="text-4xl p-2">
+      <div className="text-center h-1/4 p-2 m-2">
+        <h1 className="text-2xl p-2 lg:text-4xl">
           Reliable, efficient delivery <br />
-          <span className="font-bold text-4xl">Powered by Technology</span>
+          <span className="font-bold text-2xl lg:text-4xl">Powered by Technology</span>
         </h1>
-        <p className="text-lg pb-2">
+        <p className="text-base pb-2 lg:text-lg">
           Our Artificial Intelligence powered tools use millions of project data
           points to ensure that your project is successful
         </p>
-      </main>
+      </div>
       {/* Card section */}
       <section className="h-3/4 p-2 m-2">
-        <div className="flex justify-center items-center p-2">
-          <div className="card-1 max-w-sm shadow-xl text-start m-4">
+        <div className="flex flex-col justify-center items-center p-2 lg:flex-row">
+          <div className="card-1 max-w-sm shadow-xl text-start m-4 lg:w-1/3">
             <hr className="text-[#87CEEB] border-t-4" />
             <h2 className="text-xl font-bold p-2">Supervisor</h2>
             <p className="text-lg p-2">
               Monitors activity to identify project roadblocks
             </p>
-            <div className="w-1/4 ml-auto p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+            <div className="p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-auto" width="64" height="64">
                 <g fill="none">
                   <path
                     fill="#676E74"
@@ -76,16 +76,16 @@ const Fourcard = () => {
             </div>
           </div>
 
-          <div className="two-cards flex flex-col justify-center">
-            <div className="card-1 max-w-sm shadow-xl text-start m-4">
+          <div className="two-cards flex flex-col justify-center gap-5 max-w-sm m-4 lg:w-1/3">
+            <div className="card-1 shadow-xl text-start">
             <hr className="text-[#e53939] border-t-4" />
               <h2 className="text-xl font-bold p-2">Team Builder</h2>
               <p className="text-lg p-2">
                 Scans our talent network to create the optimal team for your
                 project
               </p>
-              <div className="w-1/4 ml-auto p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+              <div className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="ml-auto" width="64" height="64">
                   <g fill="none">
                     <path
                       fill="#EFEFF4"
@@ -130,14 +130,14 @@ const Fourcard = () => {
                 </svg>
               </div>
             </div>
-            <div className="card-2 max-w-sm shadow-xl text-start m-4">
+            <div className="card-2 shadow-xl text-start">
             <hr className="text-[#cbba1f] border-t-4" />
               <h2 className="text-xl font-bold p-2">Karma</h2>
               <p className="text-lg p-2">
                 Regularly evaluates our talent to ensure quality
               </p>
-              <div className="w-1/4 ml-auto p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+              <div className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="ml-auto" width="64" height="64">
                   <g fill="none">
                     <path fill="#676E74" d="M26.375 52.625h11.25V64h-11.25z" />
                     <path fill="#333637" d="M32 52.625h5.625V64H32z" />
@@ -199,15 +199,15 @@ const Fourcard = () => {
             </div>
           </div>
 
-          <div className="card-4 max-w-sm shadow-xl text-start m-4">
+          <div className="card-4 max-w-sm shadow-xl text-start m-4 lg:w-1/3">
           <hr className="text-[#0381b3] border-t-4" />
               <h2 className="text-xl font-bold p-2"> Calculator</h2>
               <p className="text-lg p-2">
                 Uses data from past projects to provide better delivery
                 estimates
               </p>
-              <div className="w-1/4 ml-auto p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+              <div className="p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="ml-auto" width="64" height="64">
                   <g fill="none">
                     <path
                       fill="#474F54"

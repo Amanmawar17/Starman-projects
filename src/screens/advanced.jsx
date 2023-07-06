@@ -2,9 +2,9 @@ import Card from "../components/card";
 
 const AdvancedData = [
   {
-    title: "rest-countries-api ",
+    title: "Rest-countries-api ",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "",
+    preview: "http://localhost:5173/advanced/rest-countries-api",
     code: "",
     img: "",
     tag: "av",
@@ -13,7 +13,7 @@ const AdvancedData = [
   {
     title: "promodor app",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "",
+    preview: "http://localhost:5173/advanced/promodor-app",
     code: "",
     img: "",
     tag: "av",

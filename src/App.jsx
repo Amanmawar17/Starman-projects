@@ -10,12 +10,16 @@ import Advanced from "./screens/advanced";
 import About from "./components/about";
 import ErrorPage from "./components/notfound";
 
-import Fourcard from "./components/fourcards";
-import BaseApparel from "./components/baseapparel";
-import QRcode from "./components/qr-code";
+import Fourcard from "./components/newbie/fourcards";
+import BaseApparel from "./components/newbie/baseapparel";
+import QRcode from "./components/newbie/qr-code";
 
+import Advicegen from "./components/junior/advicegen";
+import Devfinder from "./components/junior/devfinder";
 import Fylo from "./pages/fylo-dark";
-import Advicegen from "./components/advicegen";
+import Blogr from "./pages/blogr";
+
+import Countries from "./components/advanced/countries";
 
 export default function App() {
   return (
@@ -28,11 +32,19 @@ export default function App() {
           <Route path="/advanced" element={<Advanced />} />
         </Route>
         <Route path="about" element={<About />} />
-        <Route path="/newbie/qrcode" element={<QRcode />} />
-        <Route path="/newbie/fourcard" element={<Fourcard />} />
-        <Route path="/newbie/baseapparel" element={<BaseApparel />} />
-        <Route path="/junior/fylo" element={<Fylo />} />
-        <Route path="/junior/advicegen" element={<Advicegen />} />
+
+        <Route path="newbie/qrcode" element={<QRcode />} />
+        <Route path="newbie/fourcard" element={<Fourcard />} />
+        <Route path="newbie/baseapparel" element={<BaseApparel />} />
+
+        <Route path="junior/fylo" element={<Fylo />} />
+        <Route path="junior/advicegen" element={<Advicegen />} />
+        <Route path="junior/blogr" element={<Blogr />} />
+        <Route path="junior/devfinder" element={<Devfinder />} />
+
+        <Route path="advanced/rest-countries-api" element={<Countries />} />
+
+
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>

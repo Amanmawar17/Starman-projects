@@ -21,10 +21,10 @@ const Fylo = () => {
             <li className="p-3 hover:underline">Sign in</li>
           </ol>
         </nav>
-        <div className="flex justify-center items-center  bg-[#1c2431]">
+        <div className="flex justify-center items-center bg-[#1c2431]">
           <img className="h-2/3 p-2 m-2" src={intro} alt="intro image" />
         </div>
-        <div className="home flex flex-col justify-center items-center text-center">
+        <div className="home flex flex-col justify-center items-center text-center text-[#fff] bg-[#181f2a]">
           <h1 className="font-[Raleway] text-4xl p-2">
             All your files in one secure location, <br /> accessible anywhere.
           </h1>
@@ -39,7 +39,7 @@ const Fylo = () => {
         </div>
 
         {/* Features Section */}
-        <section className="features grid md:grid-cols-2 grid-cols-1 place-items-evenly gap-4 h-screen text-center">
+        <section className="features grid md:grid-cols-2 grid-cols-1 place-items-evenly gap-4 h-screen text-center bg-[#181f2a]">
           <div className="card max-w-sm flex flex-col justify-center items-center place-self-center">
             <svg width="83" height="78" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
@@ -201,7 +201,7 @@ const Fylo = () => {
         </section>
 
         {/* Productive section  */}
-        <section className="productive flex justify-evenly m-2 p-2">
+        <section className="productive flex justify-evenly p-2 bg-[#181f2a]">
           <img className="w-1/3" src={productive} alt="Be Productive" />
           <div className="flex flex-col justify-start self-center">
             <h1 className="text-4xl font-['Raleway']">
@@ -265,7 +265,7 @@ const Fylo = () => {
         </section>
 
         {/* Testimonial Section */}
-        <section className="flex relative h-screen">
+        <section className="flex relative h-screen bg-[#181f2a]">
           <img
             className="w-14 h-14 absolute top-[12rem] left-[7rem]"
             src={bgquotes}
@@ -329,7 +329,7 @@ const Fylo = () => {
           </div>
         </section>
 
-        <section className="early-access">
+        <section className="early-access bg-[#181f2a]">
           <div className="card flex justify-center items-center m-auto w-2/3 p-8 rounded shadow-2xl">
             <div className=" flex-col text-center">
               <h1 className="text-4xl my-2">Get early access today</h1>

@@ -15,7 +15,7 @@ const NewbieData = [
     tag: "nb",
   },
   {
-    title: "four card section",
+    title: "Four card section",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "http://localhost:5173/newbie/fourcard",
     code: "",
@@ -24,7 +24,7 @@ const NewbieData = [
     id: 2,
   },
   {
-    title: "base apparel coming soon",
+    title: "Base apparel coming soon",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "http://localhost:5173/newbie/baseapparel",
     code: "",

@@ -14,5 +14,10 @@
           -ms-overflow-style: none;  /* IE and Edge */
           scrollbar-width: none;  /* Firefox */
       }
-    }
+            .webkit-fill-available {
+              width: -webkit-fill-available;
+              height: -webkit-fill-available;
+            }
+
+      }
   
