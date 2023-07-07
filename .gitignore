@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+.github
 node_modules
 base-apparel-coming-soon-master
 blogr-landing-page-main
@@ -33,5 +34,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.vercel
 
 .vercel

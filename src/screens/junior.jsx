@@ -6,7 +6,7 @@ const JuniorData = [
   {
     title: "Advice generator",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/junior/advicegen",
+    preview: "/junior/advicegen",
     code: "",
     img: "",
     tag: "bi",
@@ -15,7 +15,7 @@ const JuniorData = [
   {
     title: "Devfinder",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/junior/devfinder",
+    preview: "/junior/devfinder",
     code: "",
     img: "",
     tag: "bi",
@@ -24,7 +24,7 @@ const JuniorData = [
   {
     title: "Fylo landing page",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/junior/fylo",
+    preview: "/junior/fylo",
     code: "",
     img: fylodark,
     tag: "bi",
@@ -33,7 +33,7 @@ const JuniorData = [
   {
     title: "Blogr landing page",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/junior/blogr",
+    preview: "/junior/blogr",
     code: "",
     img: "",
     tag: "bi",

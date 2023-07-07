@@ -6,9 +6,9 @@ import { GrSearch } from "react-icons/gr";
 import { BsArrow90DegLeft, BsMoonFill } from "react-icons/bs";
 
 export default function Countries() {
-  cosnt [light, isSetLight] = useState();
-  cosnt [cardClick, isSetCardClick] = useState();
-  cosnt [search, isSetSearch] = useState();
+  const [light, isSetLight] = useState();
+  const [cardClick, isSetCardClick] = useState();
+  const [search, isSetSearch] = useState();
 
   useEffect(()=>{
     // isSetlight = 

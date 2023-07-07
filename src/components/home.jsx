@@ -3,10 +3,10 @@ import Footer from "./footer";
 import Preview from "../screens/preview";
 import Navbar from "./navbar";
 
-const Home = () => {
+export default function Home(){
   return (
     <>
-      <main className="intro text-center h-[50vh] bg-primary text-secondary">
+      <div className="intro text-center h-[50vh] bg-primary text-secondary">
         <Navbar />
         <div className="flex flex-col justify-center items-center h-full">
           <h1 className="text-4xl my-2">
@@ -25,7 +25,7 @@ const Home = () => {
             Frontend Mentor.
           </p>
         </div>
-      </main>
+      </div>
       <Secondnavbar />
       <Preview />
       <Footer />
@@ -33,4 +33,3 @@ const Home = () => {
   );
 };
 
-export default Home;

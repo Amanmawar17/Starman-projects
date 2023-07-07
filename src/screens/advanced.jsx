@@ -4,7 +4,7 @@ const AdvancedData = [
   {
     title: "Rest-countries-api ",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/advanced/rest-countries-api",
+    preview: "/advanced/countries",
     code: "",
     img: "",
     tag: "av",
@@ -13,7 +13,7 @@ const AdvancedData = [
   {
     title: "promodor app",
     "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "http://localhost:5173/advanced/promodor-app",
+    preview: "/advanced/promodor-app",
     code: "",
     img: "",
     tag: "av",

@@ -10,44 +10,46 @@ import Advanced from "./screens/advanced";
 import About from "./components/about";
 import ErrorPage from "./components/notfound";
 
+import Baseapparel from "./components/newbie/baseapparel";
+import Qrcode from "./components/newbie/qr-code";
 import Fourcard from "./components/newbie/fourcards";
-import BaseApparel from "./components/newbie/baseapparel";
-import QRcode from "./components/newbie/qr-code";
 
 import Advicegen from "./components/junior/advicegen";
 import Devfinder from "./components/junior/devfinder";
 import Fylo from "./pages/fylo-dark";
 import Blogr from "./pages/blogr";
 
-import Countries from "./components/advanced/countries";
+import Iptracker from "./components/intermediate/IpTracker";
 
+import Countries from "./components//advanced/countries";
+import Promodor from "./components/advanced/promodor";
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />}>
-          <Route path="/newbie" active element={<Newbie />}/>
-          <Route path="/junior" element={<Junior />} />
-          <Route path="/intermediate" element={<Intermediate />} />
-          <Route path="/advanced" element={<Advanced />} />
-        </Route>
-        <Route path="about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
 
-        <Route path="newbie/qrcode" element={<QRcode />} />
-        <Route path="newbie/fourcard" element={<Fourcard />} />
-        <Route path="newbie/baseapparel" element={<BaseApparel />} />
+        <Route path="/newbie" active element={<Newbie />} />
+        <Route path="/newbie/qrcard" active element={<Qrcode />} />
+        <Route path="/newbie/fourcard" active element={<Fourcard />} />
+        <Route path="/newbie/baseapparel" active element={<Baseapparel />} />
 
-        <Route path="junior/fylo" element={<Fylo />} />
-        <Route path="junior/advicegen" element={<Advicegen />} />
-        <Route path="junior/blogr" element={<Blogr />} />
-        <Route path="junior/devfinder" element={<Devfinder />} />
+        <Route path="/junior" element={<Junior />} />
+        <Route path="/junior/advicegen" element={<Advicegen />} />
+        <Route path="/junior/devfinder" element={<Devfinder />} />
+        <Route path="/junior/fylo" element={<Fylo />} />
+        <Route path="/junior/blogr" element={<Blogr />} />
 
-        <Route path="advanced/rest-countries-api" element={<Countries />} />
+        <Route path="/intermediate" element={<Intermediate />} />
+        <Route path="/intermediate/iptracker" element={<Iptracker />} />
 
+        <Route path="/advanced" element={<Advanced />} />
+        <Route path="/advanced/promodor" element={<Promodor />} />
+        <Route path="/advanced/countries" element={<Countries />} />
 
-        <Route path="*" element={<ErrorPage />} />
+        <Route Component={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );
 }
-

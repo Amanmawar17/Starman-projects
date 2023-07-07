@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Secondnavbar = () => {
   return (
-    <div className="bg-primary text-secondary -z-10">
+    <div className="bg-primary text-secondary">
         <hr className="text-white" />
         <div className="p-2">
           <ol className="flex justify-evenly text-center">
