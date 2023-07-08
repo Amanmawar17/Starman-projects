@@ -36,7 +36,7 @@ const NewbieData = [
 
 export default function Newbie() {
   return (<>
-    <div className="w-full overflow-x-hidden overflow-y-scroll scroll-smooth no-scrollbar h-[85vh]">
+    <div className="w-full min-h-[85vh] py-10">
     <h1 className="text-2xl text-center font-semibold"><span className="text-hoverColor">Newbie</span> Project</h1>
   <Card details={NewbieData} name="Newbie"/>
   </div>

@@ -20,6 +20,12 @@ static-job-listings-master
 url-shortening-api-master
 advice-generator-app-main
 space-tourism-website-main
+age-calculator-app-main
+calculator-app-main
+newsletter-sign-up-with-success-message-main
+product-preview-card-component-main
+faq-accordion-card-main
+results-summary-component-main
 
 dist-ssr
 *.local
