@@ -19,7 +19,7 @@ export default function BaseApparel() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-full lg:h-screen">
+    <div className="flex flex-col justify-center items-center bg-secondary w-full lg:h-screen">
       <div className="bg-[url('/bg-base-apparel.svg')] flex max-w-6xl ">
         <div className="flex flex-col text-center lg:justify-start lg:text-start lg:mx-16 lg:w-3/5">
           <div className="p-4">
@@ -52,9 +52,7 @@ export default function BaseApparel() {
                 className="webkit-fill-available"
               />
             </div>
-          ) : (
-            <div className="hidden"></div>
-          )}
+          ) : ""}
 
           <div className="flex flex-col p-4">
             <div className="my-6">
@@ -90,9 +88,7 @@ export default function BaseApparel() {
           <div className="lg:w-2/5">
             <img src={baseapparelhero} alt="base apparel hero" />
           </div>
-        ) : (
-          <div className="hidden"></div>
-        )}
+        ) : ''}
       </div>
     </div>
   );

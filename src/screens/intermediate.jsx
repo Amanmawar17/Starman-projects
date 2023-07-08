@@ -31,5 +31,11 @@ const IntermediateData = [
   ]
 
   export default function Intermediate() {
-    return <Card details={IntermediateData} />;
+    return (<>
+      <div className="w-full overflow-x-hidden overflow-y-scroll scroll-smooth no-scrollbar h-[85vh]">
+      <h1 className="text-2xl text-center font-semibold"><span className="text-hoverColor">Intermediate</span> Project</h1>
+        <Card details={IntermediateData} />
+        </div>
+    </>
+    )
   }

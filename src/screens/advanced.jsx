@@ -31,5 +31,11 @@ const AdvancedData = [
 ];
 
 export default function Advanced() {
-  return <Card details={AdvancedData} />;
+  return (<>
+    <div className="w-full overflow-x-hidden overflow-y-scroll scroll-smooth no-scrollbar h-[85vh]">
+    <h1 className="text-2xl text-center font-semibold"><span className="text-hoverColor">Advanced</span> Project</h1>
+      <Card details={AdvancedData} />
+      </div>
+  </>
+  );
 }

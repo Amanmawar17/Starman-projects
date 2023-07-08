@@ -1,25 +1,25 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
 import Projects from "./projects";
 
 function Navbar() {
-  return (
-    <nav className="sticky top-0 z-10 bg-primary text-secondary backdrop-filter backdrop-blur-lg bg-opacity-30 max-w-5xl mx-auto">
-      <div className=" rounded-lg px-4">
-        <div className="flex items-center justify-between h-16">
-          <span className="text-2xl text-accentColor font-semibold">
+  return (<>
+    <nav className="sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-100 z-10 mx-auto h-16">
+      <div className=" rounded-lg p-4">
+        <div className="flex justify-between items-center max-w-5xl m-auto">
+          <span className="text-3xl text-accentColor font-bold">
             Aman mawar
           </span>
           <div className="flex justify-center items-center">
-            <li className="flex items-center hover:text-hoverColor">
+            <li className="flex items-center hover:text-hoverColor active:underline">
               <NavLink to="/">Home</NavLink>
             </li>
             <li className="flex items-center hover:text-hoverColor px-4">
               <NavLink to="/about">About</NavLink>
             </li>
-            <li className="flex flex-col justify-center items-center hover:text-hoverColor group me-4">
+            <li className="flex flex-col justify-center items-center hover:text-hoverColor  group me-4">
               Projects
               <Projects/>            
             </li>
@@ -30,6 +30,8 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    <Outlet/>
+    </>
   );
 }
 
