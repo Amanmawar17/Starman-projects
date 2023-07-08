@@ -1,45 +1,82 @@
+import { useEffect, useState } from "react";
 import bgquotes from "/bg-quotes.png";
 import intro from "/illustration-intro.png";
 import profile1 from "/profile-1.jpg";
 import profile2 from "/profile-2.jpg";
 import profile3 from "/profile-3.jpg";
 import productive from "/illustration-stay-productive.png";
+import bgcurvedesk from "/fylo-bg-curvy-desktop.svg";
+import bgcurvemob from "/fylo-bg-curvy-mobile.svg";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaMailBulk,
+  FaPhone,
+  FaSearchLocation,
+  FaTwitter,
+} from "react-icons/fa";
 
 const Fylo = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  function handleResize() {
+    setScreenWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="bg-[line] text-[#ffffff] font-['Open sans']">
-        <nav className="flex justify-between bg-[#1c2431] font-['Raleway'] p-4">
-          <svg width="176" height="52" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#FFF" fillRule="evenodd">
-              <path d="M0 16.372v.128l29.754 13.764 29.859-13.811v-.035L29.754 2.608 0 16.372zm10.727.064l19.028-8.802 19.03 8.802-19.031 8.801-19.027-8.801zM29.754 35.61L0 22.052v5.014l29.754 13.59L59.613 27.02v-5.015L29.754 35.61zm0 10.17L0 32.22v5.015l29.754 13.591L59.613 37.19v-5.014L29.754 45.78zM169.216 26.22a8.564 8.564 0 0 0-2.285-5.892 7.675 7.675 0 0 0-2.473-1.768 7.259 7.259 0 0 0-3.015-.636 7.259 7.259 0 0 0-3.015.636 7.674 7.674 0 0 0-2.473 1.768 8.565 8.565 0 0 0-2.285 5.893 8.564 8.564 0 0 0 2.285 5.893 7.674 7.674 0 0 0 2.473 1.767 7.258 7.258 0 0 0 3.015.637 7.258 7.258 0 0 0 3.015-.637 7.675 7.675 0 0 0 2.473-1.767 8.563 8.563 0 0 0 2.285-5.893zm6.784 0c0 2.044-.377 3.937-1.13 5.681a13.849 13.849 0 0 1-3.11 4.526c-1.319 1.273-2.866 2.279-4.64 3.017-1.775.739-3.667 1.108-5.677 1.108s-3.894-.37-5.653-1.108a14.659 14.659 0 0 1-4.617-3.04 14.116 14.116 0 0 1-3.11-4.55c-.753-1.744-1.13-3.622-1.13-5.633 0-1.98.385-3.842 1.154-5.586a14.718 14.718 0 0 1 3.133-4.573 14.457 14.457 0 0 1 4.617-3.064c1.759-.739 3.627-1.108 5.606-1.108 2.01 0 3.902.369 5.677 1.108 1.774.738 3.321 1.744 4.64 3.017 1.32 1.272 2.356 2.789 3.11 4.549.753 1.76 1.13 3.645 1.13 5.657zm-31.422 13.483a9.087 9.087 0 0 1-1.814.613 9.217 9.217 0 0 1-2.096.236c-1.005 0-1.971-.134-2.898-.4a6.347 6.347 0 0 1-2.426-1.297c-.69-.597-1.24-1.375-1.649-2.334-.408-.958-.612-2.113-.612-3.465V.717h6.925v31.16c0 1.132.228 1.91.683 2.334.456.425.997.637 1.625.637.786 0 1.54-.236 2.262-.707v5.562zM130.02 12.55l-12.249 32.386c-.91 2.42-2.104 4.164-3.58 5.233-1.476 1.068-3.235 1.603-5.277 1.603a8.4 8.4 0 0 1-1.036-.071 7.784 7.784 0 0 1-1.083-.212l-2.262-6.317a8.974 8.974 0 0 0 1.65.59 6.61 6.61 0 0 0 1.6.211c1.069 0 2.042-.243 2.922-.73.879-.488 1.554-1.391 2.025-2.711l.943-2.734-10.506-27.248h7.396l6.266 17.536 5.889-17.536h7.302zm-28.502-4.102H83.806v8.769h17.478v5.94H83.806v16.688h-7.16V2.179h24.873v6.27z" />
-            </g>
-          </svg>
-          <ol className="flex justify-betweens items-center">
-            <li className="p-3 hover:underline">Features</li>
-            <li className="p-3 hover:underline">Team</li>
-            <li className="p-3 hover:underline">Sign in</li>
+        <nav className="flex justify-between bg-[#1c2431] font-['Raleway'] p-1 lg:p-4">
+          <div className="m-2">
+            <svg width="176" height="52" xmlns="http://www.w3.org/2000/svg">
+              <g fill="#FFF" fillRule="evenodd">
+                <path d="M0 16.372v.128l29.754 13.764 29.859-13.811v-.035L29.754 2.608 0 16.372zm10.727.064l19.028-8.802 19.03 8.802-19.031 8.801-19.027-8.801zM29.754 35.61L0 22.052v5.014l29.754 13.59L59.613 27.02v-5.015L29.754 35.61zm0 10.17L0 32.22v5.015l29.754 13.591L59.613 37.19v-5.014L29.754 45.78zM169.216 26.22a8.564 8.564 0 0 0-2.285-5.892 7.675 7.675 0 0 0-2.473-1.768 7.259 7.259 0 0 0-3.015-.636 7.259 7.259 0 0 0-3.015.636 7.674 7.674 0 0 0-2.473 1.768 8.565 8.565 0 0 0-2.285 5.893 8.564 8.564 0 0 0 2.285 5.893 7.674 7.674 0 0 0 2.473 1.767 7.258 7.258 0 0 0 3.015.637 7.258 7.258 0 0 0 3.015-.637 7.675 7.675 0 0 0 2.473-1.767 8.563 8.563 0 0 0 2.285-5.893zm6.784 0c0 2.044-.377 3.937-1.13 5.681a13.849 13.849 0 0 1-3.11 4.526c-1.319 1.273-2.866 2.279-4.64 3.017-1.775.739-3.667 1.108-5.677 1.108s-3.894-.37-5.653-1.108a14.659 14.659 0 0 1-4.617-3.04 14.116 14.116 0 0 1-3.11-4.55c-.753-1.744-1.13-3.622-1.13-5.633 0-1.98.385-3.842 1.154-5.586a14.718 14.718 0 0 1 3.133-4.573 14.457 14.457 0 0 1 4.617-3.064c1.759-.739 3.627-1.108 5.606-1.108 2.01 0 3.902.369 5.677 1.108 1.774.738 3.321 1.744 4.64 3.017 1.32 1.272 2.356 2.789 3.11 4.549.753 1.76 1.13 3.645 1.13 5.657zm-31.422 13.483a9.087 9.087 0 0 1-1.814.613 9.217 9.217 0 0 1-2.096.236c-1.005 0-1.971-.134-2.898-.4a6.347 6.347 0 0 1-2.426-1.297c-.69-.597-1.24-1.375-1.649-2.334-.408-.958-.612-2.113-.612-3.465V.717h6.925v31.16c0 1.132.228 1.91.683 2.334.456.425.997.637 1.625.637.786 0 1.54-.236 2.262-.707v5.562zM130.02 12.55l-12.249 32.386c-.91 2.42-2.104 4.164-3.58 5.233-1.476 1.068-3.235 1.603-5.277 1.603a8.4 8.4 0 0 1-1.036-.071 7.784 7.784 0 0 1-1.083-.212l-2.262-6.317a8.974 8.974 0 0 0 1.65.59 6.61 6.61 0 0 0 1.6.211c1.069 0 2.042-.243 2.922-.73.879-.488 1.554-1.391 2.025-2.711l.943-2.734-10.506-27.248h7.396l6.266 17.536 5.889-17.536h7.302zm-28.502-4.102H83.806v8.769h17.478v5.94H83.806v16.688h-7.16V2.179h24.873v6.27z" />
+              </g>
+            </svg>
+          </div>
+          <ol className="flex justify-betweens items-center lg:text-lg">
+            <li className="hover:underline">Features</li>
+            <li className="mx-2 lg:mx-3 hover:underline">Team</li>
+            <li className="mr-2 hover:underline">Sign in</li>
           </ol>
         </nav>
-        <div className="flex justify-center items-center bg-[#1c2431]">
+        <div className="flex flex-col justify-center items-center relative bg-[#1c2431] pt-4">
           <img className="h-2/3 p-2 m-2" src={intro} alt="intro image" />
-        </div>
-        <div className="home flex flex-col justify-center items-center text-center text-[#fff] bg-[#181f2a]">
-          <h1 className="font-[Raleway] text-4xl p-2">
-            All your files in one secure location, <br /> accessible anywhere.
-          </h1>
-          <p className="p-2 my-4">
-            Fylo stores all your most important files in one secure location.{" "}
-            <br /> Access them wherever you need, share and collaborate with{" "}
-            <br /> friends family, and co-workers.
-          </p>
-          <button className="w-80 bg-[#339ecc] rounded-full p-3 text-lg font-[Open sans]">
-            Get Started
-          </button>
+          {screenWidth < 600 ? (
+            <img
+              src={bgcurvemob}
+              className="z-100 webkit-fill-available "
+              alt=""
+            />
+          ) : (
+            <img src={bgcurvedesk} className="z-100 webkit-fill-available" />
+          )}
+          <div className="home flex flex-col justify-center items-center  max-lg:bg-[#181f2a]  webkit-fill-available lg:max-w-lg text-center text-[#fff] px-4">
+            <div className="max-w-lg lg:absolute bottom-4">
+            <h1 className="font-[Raleway] text-4xl p-2">
+              All your files in one secure location, accessible anywhere.
+            </h1>
+            <p className="p-2 my-4">
+              Fylo stores all your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends
+              family, and co-workers.
+            </p>
+            <button className="w-80 bg-[#339ecc] rounded-full p-3 text-lg font-[Open sans]">
+              Get Started
+            </button>
+            </div>
+          </div>
         </div>
 
         {/* Features Section */}
-        <section className="features grid md:grid-cols-2 grid-cols-1 place-items-evenly gap-4 h-screen text-center bg-[#181f2a]">
+        <section className="features grid md:grid-cols-2 grid-cols-1 place-items-evenly gap-4 lg:h-screen text-center bg-[#181f2a] py-10 px-8">
           <div className="card max-w-sm flex flex-col justify-center items-center place-self-center">
             <svg width="83" height="78" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
@@ -201,21 +238,20 @@ const Fylo = () => {
         </section>
 
         {/* Productive section  */}
-        <section className="productive flex justify-evenly p-2 bg-[#181f2a]">
-          <img className="w-1/3" src={productive} alt="Be Productive" />
-          <div className="flex flex-col justify-start self-center">
-            <h1 className="text-4xl font-['Raleway']">
+        <section className="productive flex justify-evenly flex-col lg:flex-row py-10 px-8 bg-[#181f2a]">
+          <img className="lg:w-1/3" src={productive} alt="Be Productive" />
+          <div className="flex flex-col justify-start self-center py-4  max-w-lg">
+            <h1 className="text-3xl lg:text-4xl font-['Raleway']">
               Stay productive,
               <br /> wherever you are
             </h1>
             <p className="my-2">
               Never let location be an issue when accessing your files. Fylo has
-              you <br /> covered for all of your file storage needs.
+              you covered for all of your file storage needs.
             </p>
             <p className="my-2">
               Securely share files and folders with friends, family and
-              colleagues for live <br /> collaboration. No email attachments
-              required.
+              colleagues for live collaboration. No email attachments required.
             </p>
             <div className="flex items-center">
               <span className="hover:text-[#65e2d9] hover:underline">
@@ -265,14 +301,14 @@ const Fylo = () => {
         </section>
 
         {/* Testimonial Section */}
-        <section className="flex relative h-screen bg-[#181f2a]">
+        <section className="flex relative lg:h-screen bg-[#181f2a] py-10 px-2 lg:px-8">
           <img
-            className="w-14 h-14 absolute top-[12rem] left-[7rem]"
+            className="w-14 h-14 absolute top-2 left-2 lg:top-1/4 lg:left-40 z-10"
             src={bgquotes}
             alt=""
           />
-          <div className=" flex justify-center items-center m-auto w-4/5">
-            <div className="card w-1/3 flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
+          <div className=" flex justify-center items-center flex-col lg:flex-row m-auto w-4/5 z-20">
+            <div className="card max-w-lg flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
               <p>
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -290,7 +326,7 @@ const Fylo = () => {
                 </div>
               </div>
             </div>
-            <div className="card w-1/3 flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
+            <div className="card max-w-lg flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
               <p>
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -308,7 +344,7 @@ const Fylo = () => {
                 </div>
               </div>
             </div>
-            <div className="card w-1/3 flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
+            <div className="card max-w-lg flex flex-col justify-start bg-[#202a3c] rounded-sm m-2 p-4">
               <p>
                 Fylo has improved our team productivity by an order of
                 magnitude. Since making the switch our team has become a
@@ -330,131 +366,81 @@ const Fylo = () => {
         </section>
 
         <section className="early-access bg-[#181f2a]">
-          <div className="card flex justify-center items-center m-auto w-2/3 p-8 rounded shadow-2xl">
-            <div className=" flex-col text-center">
+          <div className="card flex justify-center items-center m-auto w-4/5 lg:w-2/3 p-8 rounded-t shadow-2xl">
+            <div className="flex-col text-center">
               <h1 className="text-4xl my-2">Get early access today</h1>
               <p className="my-2">
                 It only takes a minute to sign up and our free starter tier is
-                extremely generous. If you have any
-                <br />
-                questions, our support team would be happy to help you.
+                extremely generous. If you have any questions, our support team
+                would be happy to help you.
               </p>
+            </div>
+          </div>
+          <div className="bg-[#0b1523]">
+            <div className="flex justify-center items-center m-auto relative p-6 flex-col lg:flex-row bg-[#181f2a] rounded-b shadow-2xl w-4/5 lg:w-2/3">
+              <input
+                className="w-4/5 lg:w-2/3 rounded-xl text-[#339ecc] p-3 lg:ml-20 lg:mr-4 max-lg:mb-8"
+                type="email"
+                placeholder="email@example.com"
+              />
+              <button className="bg-[#65e2d9] abosolute right-0 w-4/5 lg:w-1/3 rounded-xl p-3 lg:ml-4 lg:mr-20">
+                Get Started For Free
+              </button>
             </div>
           </div>
         </section>
 
-        <footer className="flex flex-col bg-[#0b1523]">
-          <div className="flex justify-center items-center m-auto pb-6  bg-[#181f2a] rounded shadow-2xl w-2/3">
-            <input
-              className="w-96 rounded-xl text-[#339ecc] p-3"
-              type="email"
-              name=""
-              id=""
-              placeholder="email@example.com"
-            />
-            <button className="bg-[#65e2d9] w-56 rounded-xl p-3 mx-4">
-              Get Started For Free
-            </button>
-          </div>
-          <div className="p-4 m-2">
+        <footer className="flex flex-col bg-[#0b1523] px-4">
+          <div className="p-4 m-2 ">
             <svg width="176" height="52" xmlns="http://www.w3.org/2000/svg">
               <g fill="#FFF" fillRule="evenodd">
                 <path d="M0 16.372v.128l29.754 13.764 29.859-13.811v-.035L29.754 2.608 0 16.372zm10.727.064l19.028-8.802 19.03 8.802-19.031 8.801-19.027-8.801zM29.754 35.61L0 22.052v5.014l29.754 13.59L59.613 27.02v-5.015L29.754 35.61zm0 10.17L0 32.22v5.015l29.754 13.591L59.613 37.19v-5.014L29.754 45.78zM169.216 26.22a8.564 8.564 0 0 0-2.285-5.892 7.675 7.675 0 0 0-2.473-1.768 7.259 7.259 0 0 0-3.015-.636 7.259 7.259 0 0 0-3.015.636 7.674 7.674 0 0 0-2.473 1.768 8.565 8.565 0 0 0-2.285 5.893 8.564 8.564 0 0 0 2.285 5.893 7.674 7.674 0 0 0 2.473 1.767 7.258 7.258 0 0 0 3.015.637 7.258 7.258 0 0 0 3.015-.637 7.675 7.675 0 0 0 2.473-1.767 8.563 8.563 0 0 0 2.285-5.893zm6.784 0c0 2.044-.377 3.937-1.13 5.681a13.849 13.849 0 0 1-3.11 4.526c-1.319 1.273-2.866 2.279-4.64 3.017-1.775.739-3.667 1.108-5.677 1.108s-3.894-.37-5.653-1.108a14.659 14.659 0 0 1-4.617-3.04 14.116 14.116 0 0 1-3.11-4.55c-.753-1.744-1.13-3.622-1.13-5.633 0-1.98.385-3.842 1.154-5.586a14.718 14.718 0 0 1 3.133-4.573 14.457 14.457 0 0 1 4.617-3.064c1.759-.739 3.627-1.108 5.606-1.108 2.01 0 3.902.369 5.677 1.108 1.774.738 3.321 1.744 4.64 3.017 1.32 1.272 2.356 2.789 3.11 4.549.753 1.76 1.13 3.645 1.13 5.657zm-31.422 13.483a9.087 9.087 0 0 1-1.814.613 9.217 9.217 0 0 1-2.096.236c-1.005 0-1.971-.134-2.898-.4a6.347 6.347 0 0 1-2.426-1.297c-.69-.597-1.24-1.375-1.649-2.334-.408-.958-.612-2.113-.612-3.465V.717h6.925v31.16c0 1.132.228 1.91.683 2.334.456.425.997.637 1.625.637.786 0 1.54-.236 2.262-.707v5.562zM130.02 12.55l-12.249 32.386c-.91 2.42-2.104 4.164-3.58 5.233-1.476 1.068-3.235 1.603-5.277 1.603a8.4 8.4 0 0 1-1.036-.071 7.784 7.784 0 0 1-1.083-.212l-2.262-6.317a8.974 8.974 0 0 0 1.65.59 6.61 6.61 0 0 0 1.6.211c1.069 0 2.042-.243 2.922-.73.879-.488 1.554-1.391 2.025-2.711l.943-2.734-10.506-27.248h7.396l6.266 17.536 5.889-17.536h7.302zm-28.502-4.102H83.806v8.769h17.478v5.94H83.806v16.688h-7.16V2.179h24.873v6.27z" />
               </g>
             </svg>
           </div>
-
-          <div className="flex justify-evenly items-center">
-            <div className="flex p-2 my-2 w-2/3">
-              <div className="flex w-3/5 items-center">
-                <svg
-                  className="overflow-visible"
-                  width="13"
-                  height="18"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6.188 0C2.74 0 0 2.79 0 6.3 0 10.98 6.188 18 6.188 18s6.187-7.02 6.187-11.7c0-3.51-2.74-6.3-6.188-6.3zm0 8.55c-1.238 0-2.21-.99-2.21-2.25s.972-2.25 2.21-2.25c1.237 0 2.21.99 2.21 2.25s-.973 2.25-2.21 2.25z"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                  />
-                </svg>
-                <p className="px-2">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
-                </p>
-              </div>
-              <div className="">
-                <div className="flex items-center p-2 my-2">
-                  <svg
-                    width="18"
-                    height="18"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M17 12.5c-1.2 0-2.4-.2-3.6-.6-.3-.1-.7 0-1 .2l-2.2 2.2c-2.8-1.4-5.1-3.8-6.6-6.6l2.2-2.2c.3-.3.4-.7.2-1-.3-1.1-.5-2.3-.5-3.5 0-.6-.4-1-1-1H1C.4 0 0 .4 0 1c0 9.4 7.6 17 17 17 .6 0 1-.4 1-1v-3.5c0-.6-.4-1-1-1zM16 9h2c0-5-4-9-9-9v2c3.9 0 7 3.1 7 7zm-4 0h2c0-2.8-2.2-5-5-5v2c1.7 0 3 1.3 3 3z"
-                      fill="#FFF"
-                      fillRule="evenodd"
-                    />
-                  </svg>
-                  <h3 className="mx-2">+1-543-123-4567</h3>
+          <div className="flex flex-col lg:flex-row">
+            <div className="flex lg:justify-evenly lg:items-center flex-col lg:flex-row items-start">
+              <div className="flex flex-col lg:flex-row p-2 my-2 w-4/5 lg:w-2/3">
+                <div className="flex justify-start lg:w-3/5 items-center lg:justify-center lg:items-start">
+                  <FaSearchLocation className="w-10" />
+                  <p className="px-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </p>
                 </div>
-                <div className="flex items-center p-2 my-2">
-                  <svg
-                    width="20"
-                    height="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g fill="none" fillRule="evenodd">
-                      <path d="M-2-4h24v24H-2z" />
-                      <path
-                        d="M18 0H2C.9 0 0 .9 0 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2zm0 14h-2V5.2L10 9 4 5.2V14H2V2h1.2L10 6.2 16.8 2H18v12z"
-                        fill="#FFF"
-                      />
-                    </g>
-                  </svg>
-                  <h3 className="mx-2">example@fylo.com</h3>
+                <div className="justify-start">
+                  <div className="flex items-center p-2 my-2">
+                    <FaPhone />
+                    <h3 className="mx-2">+1-543-123-4567</h3>
+                  </div>
+                  <div className="flex items-center p-2 my-2">
+                    <FaMailBulk />
+                    <h3 className="mx-2">example@fylo.com</h3>
+                  </div>
                 </div>
               </div>
+              <div className="flex-col justify-start m-4">
+                <h1>About Us</h1>
+                <h1>Jobs</h1>
+                <h1>Press</h1>
+                <h1>Blog</h1>
+              </div>
+              <div className="flex-col justify-start m-4">
+                <h3>Contact Us</h3>
+                <h3>Terms</h3>
+                <h3>Privacy</h3>
+              </div>
             </div>
-            <div className="flex-col m-4">
-              <h1>About Us</h1>
-              <h1>Jobs</h1>
-              <h1>Press</h1>
-              <h1>Blog</h1>
-            </div>
-            <div className="flex-col m-4">
-              <h3>Contact Us</h3>
-              <h3>Terms</h3>
-              <h3>Privacy</h3>
-            </div>
-            <div className="social-icons flex m-4">
+            <div className="social-icons flex justify-center items-center m-4">
               <button className="w-8 h-8 rounded-full border text-[#ffffff] hover:text-[#65e2d9]">
-                <svg
-                  className="text-[#ffffff] m-auto w-5 h-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
-                </svg>
+                <FaInstagram className="m-auto" />
               </button>
               <button className="w-8 h-8 rounded-full border hover:text-[#65e2d9] mx-3">
-                <svg
-                  className="text-[#ffffff] m-auto w-5 h-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-                </svg>
+                <FaTwitter className="m-auto" />
               </button>
               <button className="w-8 h-8 rounded-full border hover:text-[#65e2d9]">
-                <svg
-                  className="text-[#ffffff] m-auto w-5 h-5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                >
-                  <path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
-                </svg>
+                <FaFacebook className="m-auto" />
               </button>
             </div>
           </div>
@@ -462,6 +448,6 @@ const Fylo = () => {
       </div>
     </>
   );
-}
+};
 
 export default Fylo;

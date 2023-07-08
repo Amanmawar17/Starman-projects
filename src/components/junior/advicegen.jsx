@@ -4,37 +4,50 @@ import { useEffect, useState } from "react";
 
 const Advicegen = () => {
   const [advice, setAdvice] = useState("");
-  const [isDevice, setDevice] = useState(window.innerWidth < 600)
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
-  const updateMedia = () => {
-    setDevice(window.innerWidth < 600);
+  function handleResize() {
+    setScreenWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://api.adviceslip.com/advice");
+      const data = await response.json();
+      setAdvice(data.slip);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    window.addEventListener("resize", updateMedia);
-    return () => window.removeEventListener("resize", updateMedia);
-  });
-
-  const handleClick = 
-  useEffect(() => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((response) => response.json())
-      .then((data) => setAdvice(data.slip))
-      .catch((error) => console.log(error));
+    fetchData();
   }, []);
+
+  const handleClick = () => {
+    fetchData();
+  };
+
 
   return (
     <div className="flex flex-col justify-center items-center bg-[#1f2632] h-screen text-center">
-      <div className="flex flex-col justify-evenly items-center bg-[#323a49] h-64 rounded-lg shadow-xl overflow-hidden">
+      <div className="flex flex-col justify-evenly items-center bg-[#323a49] h-64 rounded-lg shadow-xl max-w-lg px-8">
         <h1 className="text-sm font-semibold text-[#52ffa8]">
           Advice #{advice.id}
         </h1>
-          <p className="text-xl text-[#cee3e9] font-sans font-bold p-2">
+          <p className="text-xl text-[#cee3e9] font-sans font-bold ">
             "{advice.advice}"
           </p>
-          {isDevice ? (<span className="mobile">
+          {screenWidth < 600 ? (<span className="mobile mb-3">
             <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" fill-rule="evenodd">
+              <g fill="none" fillRule="evenodd">
                 <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
                 <g transform="translate(138)" fill="#CEE3E9">
                   <rect width="6" height="16" rx="3" />
@@ -42,7 +55,7 @@ const Advicegen = () => {
                 </g>
               </g>
             </svg>
-          </span>) : (<span className="desktop">
+          </span>) : (<span className="desktop mb-3">
             <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fillRule="evenodd">
                 <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
@@ -54,7 +67,7 @@ const Advicegen = () => {
             </svg>
           </span>)}
       </div>
-      <button className="relative rounded-full bg-[#52ffa8] bottom-8 w-16 h-16 overflow-hidden " onClick={handleClick}>
+      <button className="relative rounded-full bg-[#52ffa8] bottom-8 w-16 h-16 hover:shadow-md hover:shadow-[#52ffa8]" onClick={handleClick}>
         <svg
           className="m-auto"
           width="24"

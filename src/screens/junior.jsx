@@ -1,6 +1,9 @@
 import Card from "../components/card";
 
 import fylodark from "../assets/fylodark.jpg";
+import advicegen from "../assets/advicegenpreview.jpg";
+import devfinder from "../assets/devfinderpreview.jpg";
+import blogr from "../assets/blogrpreview.jpg";
 
 const JuniorData = [
   {
@@ -8,7 +11,7 @@ const JuniorData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "/junior/advicegen",
     code: "",
-    img: "",
+    img: advicegen,
     tag: "bi",
     id: 1,
   },
@@ -17,7 +20,7 @@ const JuniorData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "/junior/devfinder",
     code: "",
-    img: "",
+    img: devfinder,
     tag: "bi",
     id: 2,
   },
@@ -35,7 +38,7 @@ const JuniorData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "/junior/blogr",
     code: "",
-    img: "",
+    img: blogr,
     tag: "bi",
     id: 4,
   },

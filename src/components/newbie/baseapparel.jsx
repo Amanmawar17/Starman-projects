@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import { FaExclamationCircle } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
 import baseapparelhero from "/baseapparelhero.jpg";
 import baseapparelheromobile from "/baseapparel-hero-mobile.jpg";
@@ -55,8 +56,8 @@ export default function BaseApparel() {
           ) : ""}
 
           <div className="flex flex-col p-4">
-            <div className="my-6">
-              <h1 className="font-sans font-light text-4xl lg:text-6xl text-[#f96262]">
+            <div className="my-6 max-w-sm">
+              <h1 className="font-sans font-normal text-4xl lg:text-6xl text-[#f96262]">
                 WE'RE
               </h1>
               <span className="font-semibold text-4xl lg:text-6xl text-[#000]">
@@ -69,18 +70,19 @@ export default function BaseApparel() {
                 announcements and our launch deals.
               </p>
             </div>
-            <div className="flex relative w-full lg:w-2/3">
+            <div className="flex relative w-full text-[#000] lg:w-2/3">
               <input
-                id="email"
                 type="email"
                 placeholder="Email Address"
-                autoComplete="email"
-                className="text-sm p-2 w-full lg:w-5/6 rounded-2xl border-2 border-solid border-[#d0c7c7]"
+                autoComplete="email" pattern=".+@beststartupever\.com" maxLength={64}
+                className="peer text-sm p-2 w-full lg:w-5/6 rounded-2xl border-2 border-solid border-[#d0c7c7] active:border-[#ee8c8c]       invalid:border-pink-500 invalid:text-pink-600
+                focus:invalid:border-pink-500"
               />
-              <button className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 rounded-2xl">
+              <button type="submit" className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter hover:shadow-md  hover:backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 rounded-2xl">
                 <BsChevronRight className="m-auto" />
               </button>
             </div>
+              <p className="text-[#ee8c8c] invisible peer-invalid:visible text-sm">Please provide a valid email<FaExclamationCircle/></p>
           </div>
         </div>
 

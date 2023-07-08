@@ -3,21 +3,38 @@
 @tailwind utilities;
 
 @layer utilities {
-    
-      /* Hide scrollbar for Chrome, Safari and Opera */
-      .no-scrollbar::-webkit-scrollbar {
-          display: none;
-      }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
-      /* Hide scrollbar for IE, Edge and Firefox */
-      .no-scrollbar {
-          -ms-overflow-style: none;  /* IE and Edge */
-          scrollbar-width: none;  /* Firefox */
-      }
-            .webkit-fill-available {
-              width: -webkit-fill-available;
-              height: -webkit-fill-available;
-            }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .webkit-fill-available {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
 
-      }
-  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #c8c8c8;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2B3245;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #374057;
+  }
+}

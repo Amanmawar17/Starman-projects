@@ -1,8 +1,8 @@
 import Card from "../components/card";
 
 import qrcode from "../assets/qrcode.jpg";
-import fourcard from "../assets/fourcard.jpg";
-import baseapparel from "../assets/baseapparel.jpg";
+import fourcard from "../assets/fourcardpreview.jpg";
+import baseapparel from "../assets/baseapparelpreview.jpg";
 
 const NewbieData = [
   {
