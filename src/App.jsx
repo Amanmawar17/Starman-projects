@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
-import Home from "./components/home";
+import Home from "./components/home/home";
 import Newbie from "./screens/newbie";
 import Junior from "./screens/junior";
 import Intermediate from "./screens/intermediate";
@@ -13,13 +13,19 @@ import ErrorPage from "./components/notfound";
 import Baseapparel from "./components/newbie/baseapparel";
 import Qrcode from "./components/newbie/qr-code";
 import Fourcard from "./components/newbie/fourcards";
+import ProductReview from "./components/newbie/ProductReview";
+import ResultsSummary from "./components/newbie/ResultsSummary";
 
 import Advicegen from "./components/junior/advicegen";
 import Devfinder from "./components/junior/devfinder";
+import Newsletter from "./components/junior/Newsletter";
 import Fylo from "./pages/fylo-dark";
 import Blogr from "./pages/blogr";
 
 import Iptracker from "./components/intermediate/IpTracker";
+import UrlShortening from "./components/intermediate/UrlShortening";
+import JobListing from "./components/intermediate/JobListing";
+import SpaceTravel from "./components/intermediate/SpaceTravel";
 
 import Countries from "./components//advanced/countries";
 import Promodor from "./components/advanced/promodor";
@@ -29,7 +35,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Front />}>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/newbie" element={<Newbie />} />
         <Route path="/junior" element={<Junior />} />
@@ -41,13 +47,19 @@ export default function App() {
       <Route path="newbie/qrcode" element={<Qrcode />} />
       <Route path="newbie/fourcard" element={<Fourcard />} />
       <Route path="newbie/baseapparel" element={<Baseapparel />} />
+      <Route path="newbie/productreview" element={<ProductReview />} />
+      <Route path="newbie/resultssummary" element={<ResultsSummary />} />
 
       <Route path="junior/advicegen" element={<Advicegen />} />
       <Route path="junior/devfinder" element={<Devfinder />} />
+      <Route path="junior/newsletter" element={<Newsletter />} />
       <Route path="junior/fylo" element={<Fylo />} />
       <Route path="junior/blogr" element={<Blogr />} />
 
       <Route path="intermediate/iptracker" element={<Iptracker />} />
+      <Route path="intermediate/urlshortening" element={<UrlShortening />} />
+      <Route path="intermediate/joblisting" element={<JobListing />} />
+      <Route path="intermediate/spacetravel" element={<SpaceTravel />} />
 
       <Route path="advanced/promodor" element={<Promodor />} />
       <Route path="advanced/countries" element={<Countries />} />

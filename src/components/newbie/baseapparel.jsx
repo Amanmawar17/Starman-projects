@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { FaExclamationCircle } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
@@ -6,24 +6,31 @@ import baseapparelhero from "/baseapparelhero.jpg";
 import baseapparelheromobile from "/baseapparel-hero-mobile.jpg";
 
 export default function BaseApparel() {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [email, setEmail] = useState("");
+  const [isValid, setIsValid] = useState(true);
 
-  function handleResize() {
-    setScreenWidth(window.innerWidth);
-  }
-  useEffect(() => {
-    window.addEventListener("resize", handleResize);
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const validateEmail = (e) => {
+    const emailExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    const isValidEmail = emailExp.test(email);
+    setIsValid(isValidEmail);
+  };
 
+  const onValidate = () => {
+    validateEmail();
+    console.log("hellp me");
+    setInterval(() => {
+      // alert('setinterval is running!');
+    }, 5000);
+  };
   return (
-    <div className="flex flex-col justify-center items-center bg-secondary w-full lg:h-screen">
-      <div className="bg-[url('/bg-base-apparel.svg')] flex max-w-6xl ">
-        <div className="flex flex-col text-center lg:justify-start lg:text-start lg:mx-16 lg:w-3/5">
-          <div className="p-4">
+    <section className="bg-secondary font-mono">
+      <div className="flex">
+        <div className="bg-[url('/bg-base-apparel.svg')] h-screen grid gap-2 lg:gap-5 overflow-y-scroll no-scrollbar">
+          <div className="">
             <svg xmlns="http://www.w3.org/2000/svg" width="158" height="33">
               <defs>
                 <linearGradient id="a" x1="0%" y1="0%" y2="100%">
@@ -45,53 +52,66 @@ export default function BaseApparel() {
               </g>
             </svg>
           </div>
-          {screenWidth < 1024 ? (
-            <div>
-              <img
-                src={baseapparelheromobile}
-                alt="hero-image"
-                className="webkit-fill-available"
-              />
-            </div>
-          ) : ""}
-
-          <div className="flex flex-col p-4">
-            <div className="my-6 max-w-sm">
-              <h1 className="font-sans font-normal text-4xl lg:text-6xl text-[#f96262]">
-                WE'RE
-              </h1>
-              <span className="font-semibold text-4xl lg:text-6xl text-[#000]">
-                COMING <br />
-                SOON
-              </span>
-              <p className="font-serif text-[#ee8c8c] text-base my-6">
-                Hello fellow shoppers! We're currently building our new fashion
-                store. Add your email below to stay up-to-date with
-                announcements and our launch deals.
+          <div className="block lg:hidden ">
+            <img
+              src={baseapparelheromobile}
+              alt="hero-image"
+              className="webkit-fill-available"
+            />
+          </div>
+          <div className="">
+            <h1 className="font-normal text-3xl lg:text-6xl text-[#f96262]">
+              WE'RE
+            </h1>
+            <span className="font-semibold text-3xl lg:text-6xl text-[#000]">
+              COMING <br />
+              SOON
+            </span>
+            <p className="text-[#ee8c8c] text-xs">
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <div className="flex relative w-full text-[#000] lg:w-2/3 h-20">
+            <input
+            id="email"
+              type="email"
+              value={email}
+              onChange={handleChange}
+              placeholder="Email Address"
+              autoComplete="email"
+              className="peer text-sm p-2 w-full lg:w-5/6 rounded-2xl border-2 border-solid border-[#d0c7c7] h-2/3"
+            />
+            {isValid ? (
+              ""
+            ) : (
+              <FaExclamationCircle className="text-[#ee8c8c] absolute bottom-1/2 right-1/3" />
+            )}
+            <button
+              type="submit"
+              className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter hover:shadow-md  hover:backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 h-2/3 rounded-2xl"
+              onClick={onValidate}
+            >
+              <BsChevronRight className="m-auto" />
+            </button>
+            {isValid ? (
+              ""
+            ) : (
+              <p className="text-[#ee8c8c] text-sm absolute bottom-0 left-4">
+                Please provide a valid email
               </p>
-            </div>
-            <div className="flex relative w-full text-[#000] lg:w-2/3">
-              <input
-                type="email"
-                placeholder="Email Address"
-                autoComplete="email" pattern=".+@beststartupever\.com" maxLength={64}
-                className="peer text-sm p-2 w-full lg:w-5/6 rounded-2xl border-2 border-solid border-[#d0c7c7] active:border-[#ee8c8c]       invalid:border-pink-500 invalid:text-pink-600
-                focus:invalid:border-pink-500"
-              />
-              <button type="submit" className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter hover:shadow-md  hover:backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 rounded-2xl">
-                <BsChevronRight className="m-auto" />
-              </button>
-            </div>
-              <p className="text-[#ee8c8c] invisible peer-invalid:visible text-sm">Please provide a valid email<FaExclamationCircle/></p>
+            )}
           </div>
         </div>
-
-        {screenWidth > 1024 ? (
-          <div className="lg:w-2/5">
-            <img src={baseapparelhero} alt="base apparel hero" />
-          </div>
-        ) : ''}
+        <div className="hidden lg:block h-screen">
+          <img
+            src={baseapparelhero}
+            alt="base apparel hero"
+            className="webkit-fill-available"
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

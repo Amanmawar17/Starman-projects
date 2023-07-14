@@ -1,27 +1,30 @@
 import Card from "../components/card";
 
+import countries from "../assets/countries-desktop-preview.jpg";
+import promodor from "../assets/promodor-preview.jpg";
+
 const AdvancedData = [
   {
     title: "Rest-countries-api ",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "/advanced/countries",
     code: "",
-    img: "",
+    img: countries,
     tag: "av",
     id: 1,
   },
   {
-    title: "promodor app",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    title: "Promodor app",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "/advanced/promodor-app",
     code: "",
-    img: "",
+    img: promodor,
     tag: "av",
     id: 2,
   },
   {
     title: "Movie app",
-    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "",
     code: "",
     img: "",
@@ -31,11 +34,14 @@ const AdvancedData = [
 ];
 
 export default function Advanced() {
-  return (<>
-    <div className="w-full min-h-[85vh] py-10">
-    <h1 className="text-2xl text-center font-semibold"><span className="text-hoverColor">Advanced</span> Project</h1>
-      <Card details={AdvancedData} />
+  return (
+    <>
+      <div className="w-full min-h-screen py-10">
+        <h1 className="text-2xl text-center font-semibold">
+          <span className="text-hoverColor">Advanced</span> Project
+        </h1>
+        <Card details={AdvancedData} />
       </div>
-  </>
+    </>
   );
 }

@@ -10,7 +10,7 @@ function Navbar() {
       <div className=" rounded-lg p-4">
         <div className="flex justify-between items-center max-w-5xl m-auto flex-col sm:flex-row">
           <span className="text-3xl text-accentColor font-bold">
-            Frontend-Projects
+            Starman-Projects
           </span>
           <div className="flex justify-center items-center text-lg">
             <li className="flex items-center hover:text-hoverColor">

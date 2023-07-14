@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
 
-      <div className="bg-primary text-secondary h-[85vh]">About</div>
+      <div className="bg-primary text-secondary h-screen">About</div>
 
   );
 };

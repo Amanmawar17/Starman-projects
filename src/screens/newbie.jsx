@@ -3,6 +3,8 @@ import Card from "../components/card";
 import qrcode from "../assets/qrcode.jpg";
 import fourcard from "../assets/fourcardpreview.jpg";
 import baseapparel from "../assets/baseapparelpreview.jpg";
+import productreview from "../assets/product-desktop-preview.jpg";
+import results from "../assets/results-desktop-preview.jpg";
 
 const NewbieData = [
   {
@@ -32,14 +34,35 @@ const NewbieData = [
     tag: "nb",
     id: 3,
   },
+  {
+    title: "Product preview card component",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    preview: "newbie/productreview",
+    code: "",
+    img: productreview,
+    tag: "nb",
+    id: 3,
+  },
+  {
+    title: "Results summary component",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    preview: "newbie/resultssummary",
+    code: "",
+    img: results,
+    tag: "nb",
+    id: 3,
+  },
 ];
 
 export default function Newbie() {
-  return (<>
-    <div className="w-full min-h-[85vh] py-10">
-    <h1 className="text-2xl text-center font-semibold"><span className="text-hoverColor">Newbie</span> Project</h1>
-  <Card details={NewbieData} name="Newbie"/>
-  </div>
-  </>
-  )
+  return (
+    <>
+      <div className="w-full min-h-screen py-10">
+        <h1 className="text-2xl text-center font-semibold">
+          <span className="text-hoverColor">Newbie</span> Project
+        </h1>
+        <Card details={NewbieData} name="Newbie" />
+      </div>
+    </>
+  );
 }

@@ -1,23 +1,23 @@
 const Fourcard = () => {
   return (
     <>
-      <section className="bg-secondary h-screen text-[#000] m-0 p-0">
-        <div className="text-center h-1/4 px-2 mx-2">
+      <section className="bg-secondary h-screen grid place-items-center overflow-y-scroll no-scrollbar text-[#000] m-0 p-0">
+        <div className="text-center px-2 mx-auto max-w-sm lg:max-w-md">
           <h1 className="text-2xl p-2 lg:text-4xl">
             Reliable, efficient delivery <br />
             <span className="font-bold text-2xl lg:text-4xl">
               Powered by Technology
             </span>
           </h1>
-          <p className="text-base pb-2 lg:text-lg">
+          <p className="text-base mb-2 lg:text-lg">
             Our Artificial Intelligence powered tools use millions of project
             data points to ensure that your project is successful
           </p>
         </div>
         {/* Card section */}
-        <section className="h-3/4 px-2 mx-2">
-          <div className="flex flex-col justify-center items-center p-2 lg:flex-row">
-            <div className="card-1 max-w-sm shadow-xl text-start m-4 lg:w-1/3">
+        <section className=" px-4 mx-2">
+          <div className="flex flex-col justify-center items-center lg:flex-row">
+            <div className="card-1 max-w-sm shadow-xl text-start mx-4 my-3 lg:w-1/3">
               <hr className="text-[#87CEEB] border-t-4" />
               <h2 className="text-xl font-bold p-2">Supervisor</h2>
               <p className="text-lg p-2">
@@ -84,7 +84,7 @@ const Fourcard = () => {
               </div>
             </div>
 
-            <div className="two-cards flex flex-col justify-center gap-5 max-w-sm m-4 lg:w-1/3">
+            <div className="two-cards flex flex-col justify-center gap-5 max-w-sm mx-4 my-3 lg:w-1/3">
               <div className="card-1 shadow-xl text-start">
                 <hr className="text-[#e53939] border-t-4" />
                 <h2 className="text-xl font-bold p-2">Team Builder</h2>
@@ -223,7 +223,7 @@ const Fourcard = () => {
               </div>
             </div>
 
-            <div className="card-4 max-w-sm shadow-xl text-start m-4 lg:w-1/3">
+            <div className="card-4 max-w-sm shadow-xl text-start mx-4 my-3 lg:w-1/3">
               <hr className="text-[#0381b3] border-t-4" />
               <h2 className="text-xl font-bold p-2"> Calculator</h2>
               <p className="text-lg p-2">

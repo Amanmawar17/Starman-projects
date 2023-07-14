@@ -21,7 +21,7 @@ export default function Card(props) {
                     <h2 className="hover:text-2xl pointer-link">
                       {value.title}
                     </h2>
-                    <ul className="flex">
+                    <ul className="flex mt-2">
                       <li>
                         <a href={value.code} target="_blank">
                           <FaGithub />
