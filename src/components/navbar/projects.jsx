@@ -8,6 +8,7 @@ const Projects = () => {
       <li className="hover:text-hoverColor" ><Link to="/junior">Junior</Link></li>
       <li className="hover:text-hoverColor" ><Link to="/intermediate">Intermediate</Link></li>
       <li className="hover:text-hoverColor" ><Link to="/advanced">Advanced</Link></li>
+      <li className="hover:text-hoverColor" ><Link to="/database">Database</Link></li>
     </ul>
   );
 };

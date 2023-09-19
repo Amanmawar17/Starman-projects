@@ -7,40 +7,40 @@ import spacetravel from "../assets/space-travel-preview.jpg";
 
 const IntermediateData = [
   {
+    id: 1,
     title: "IP address tracker",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "intermediate/iptracker",
     code: "",
     img: iptracker,
     tag: "md",
-    id: 1,
   },
   {
+    id: 2,
     title: "Url shortner",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "intermediate/urlshortening",
     code: "",
     img: urlshortening,
     tag: "md",
-    id: 2,
   },
   {
+    id: 3,
     title: "Sapce Travel",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "intermediate/spacetravel",
     code: "",
     img: spacetravel,
     tag: "md",
-    id: 3,
   },
   {
+    id: 4,
     title: "Job listing",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "intermediate/joblisting",
     code: "",
     img: joblisting,
     tag: "md",
-    id: 3,
   },
 ];
 

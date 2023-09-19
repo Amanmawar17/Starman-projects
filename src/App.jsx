@@ -6,9 +6,10 @@ import Newbie from "./screens/newbie";
 import Junior from "./screens/junior";
 import Intermediate from "./screens/intermediate";
 import Advanced from "./screens/advanced";
+import Database from "./screens/database";
 
-import About from "./components/about";
-import ErrorPage from "./components/notfound";
+import About from "./components/about/about";
+import NotFound from "./components/notfound";
 
 import Baseapparel from "./components/newbie/baseapparel";
 import Qrcode from "./components/newbie/qr-code";
@@ -17,15 +18,15 @@ import ProductReview from "./components/newbie/ProductReview";
 import ResultsSummary from "./components/newbie/ResultsSummary";
 
 import Advicegen from "./components/junior/advicegen";
-import Devfinder from "./components/junior/devfinder";
+import Devfinder from "./components/junior/devfinder/devfinder";
 import Newsletter from "./components/junior/Newsletter";
 import Fylo from "./pages/fylo-dark";
 import Blogr from "./pages/blogr";
 
 import Iptracker from "./components/intermediate/IpTracker";
-import UrlShortening from "./components/intermediate/UrlShortening";
+import UrlShortening from "./pages/UrlShortening";
 import JobListing from "./components/intermediate/JobListing";
-import SpaceTravel from "./components/intermediate/SpaceTravel";
+import SpaceTravel from "./components/intermediate/SpaceTravel/SpaceTravel";
 
 import Countries from "./components//advanced/countries";
 import Promodor from "./components/advanced/promodor";
@@ -41,8 +42,9 @@ export default function App() {
         <Route path="/junior" element={<Junior />} />
         <Route path="/intermediate" element={<Intermediate />} />
         <Route path="/advanced" element={<Advanced />} />
+        <Route path="/database" element={<Database />} />
       </Route>
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="*" element={<NotFound />} />
 
       <Route path="newbie/qrcode" element={<Qrcode />} />
       <Route path="newbie/fourcard" element={<Fourcard />} />

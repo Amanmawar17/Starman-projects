@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0c1221]">
+    <footer role="contentinfo" className="bg-[#0c1221] text-secondary">
       <div className="flex justify-evenly items-center flex-col md:flex-row md:h-10 py-6">
         <h3 className="flex items-center">
           Made by

@@ -28,7 +28,7 @@ const RippleBackground = () => {
     const rippleAnimation = `
       @keyframes ripple {
         0% {
-          transform: scale(0.3);
+          transform: scale(0.2);
         }
         50% {
           transform: scale(0.4);

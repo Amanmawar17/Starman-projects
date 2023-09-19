@@ -23,7 +23,7 @@ const JuniorData = [
     code: "",
     img: blogr,
     tag: "bi",
-    id: 4,
+    id: 2,
   },
   {
     title: "Devfinder",
@@ -32,7 +32,7 @@ const JuniorData = [
     code: "",
     img: devfinder,
     tag: "bi",
-    id: 2,
+    id: 3,
   },
   {
     title: "Newsletter sign-up form with success message",
@@ -50,7 +50,7 @@ const JuniorData = [
     code: "",
     img: fylodark,
     tag: "bi",
-    id: 3,
+    id: 5,
   },
 ];
 

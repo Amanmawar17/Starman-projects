@@ -1,115 +1,91 @@
-import React, { useState } from "react";
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 
 import { FaExclamationCircle } from "react-icons/fa";
 import { BsChevronRight } from "react-icons/bs";
-import baseapparelhero from "/baseapparelhero.jpg";
-import baseapparelheromobile from "/baseapparel-hero-mobile.jpg";
+import baseapparelhero from "/baseapparel/baseapparelhero.jpg";
+import baseapparelheromobile from "/baseapparel/baseapparel-hero-mobile.jpg";
+import logo from '/baseapparel/baseapparel_logo.svg';
+
+const schema = yup
+  .object({
+    email: yup.string().email().required(),
+  })
+  .required();
 
 export default function BaseApparel() {
-  const [email, setEmail] = useState("");
-  const [isValid, setIsValid] = useState(true);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = (data) => console.log(data);
 
-  const handleChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const validateEmail = (e) => {
-    const emailExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-    const isValidEmail = emailExp.test(email);
-    setIsValid(isValidEmail);
-  };
-
-  const onValidate = () => {
-    validateEmail();
-    console.log("hellp me");
-    setInterval(() => {
-      // alert('setinterval is running!');
-    }, 5000);
-  };
   return (
-    <section className="bg-secondary font-mono">
-      <div className="flex">
-        <div className="bg-[url('/bg-base-apparel.svg')] h-screen grid gap-2 lg:gap-5 overflow-y-scroll no-scrollbar">
-          <div className="">
-            <svg xmlns="http://www.w3.org/2000/svg" width="158" height="33">
-              <defs>
-                <linearGradient id="a" x1="0%" y1="0%" y2="100%">
-                  <stop offset="0%" stopColor="#F8BFBF" />
-                  <stop offset="100%" stopColor="#EE8B8B" />
-                </linearGradient>
-              </defs>
-              <g fill="none" fillRule="evenodd">
-                <path
-                  fill="#423A3A"
-                  fillRule="nonzero"
-                  d="M53.699 10.2c0 .571-.11 1.071-.33 1.5-.221.428-.537.786-.947 1.071-.411.286-.905.5-1.483.643a7.997 7.997 0 0 1-1.92.215h-5.947V1.126h5.804c1.286 0 2.295.292 3.028.875.732.584 1.098 1.37 1.098 2.358v.036c0 .357-.045.673-.134.946a2.846 2.846 0 0 1-.875 1.322 3.49 3.49 0 0 1-.634.429c.726.274 1.298.646 1.714 1.116.417.47.626 1.122.626 1.956v.035zm-3.43-5.34v-.037c0-.416-.154-.735-.464-.955-.31-.22-.756-.33-1.34-.33h-2.714V6.18h2.536c.607 0 1.09-.104 1.447-.313.357-.208.535-.544.535-1.009zm.697 5v-.036c0-.416-.16-.747-.482-.99-.322-.245-.84-.367-1.554-.367h-3.18v2.75h3.27c.606 0 1.083-.11 1.428-.33.345-.22.518-.563.518-1.027zm21.945 3.769h-2.876l-1.143-2.804h-5.287l-1.143 2.804h-2.804l5.358-12.592h2.536l5.359 12.592zM67.91 8.396L66.249 4.34l-1.661 4.055h3.322zm20.73 1.536c0 .619-.113 1.17-.34 1.652a3.393 3.393 0 0 1-.946 1.214 4.277 4.277 0 0 1-1.447.75 6.281 6.281 0 0 1-1.858.26 8.28 8.28 0 0 1-2.804-.492 7.422 7.422 0 0 1-2.5-1.51L80.37 9.86a8.16 8.16 0 0 0 1.76 1.107c.6.274 1.259.411 1.973.411.572 0 1.015-.104 1.33-.312a.984.984 0 0 0 .474-.867v-.035c0-.179-.033-.337-.098-.474-.066-.137-.19-.265-.375-.384a3.928 3.928 0 0 0-.768-.357 13.29 13.29 0 0 0-1.277-.375 15.566 15.566 0 0 1-1.715-.518 4.83 4.83 0 0 1-1.304-.705 2.853 2.853 0 0 1-.83-1.045c-.197-.417-.295-.935-.295-1.554v-.036c0-.571.107-1.086.322-1.545.214-.458.514-.854.901-1.187a4.06 4.06 0 0 1 1.385-.768A5.564 5.564 0 0 1 83.62.948c.917 0 1.76.137 2.527.41a7.326 7.326 0 0 1 2.117 1.18l-1.43 2.071a9.057 9.057 0 0 0-1.642-.902 4.2 4.2 0 0 0-1.608-.33c-.536 0-.938.104-1.205.312-.268.209-.402.468-.402.777v.036c0 .202.038.378.116.527.077.149.217.283.42.402.202.119.479.232.83.339.351.107.795.232 1.33.375.632.167 1.194.354 1.688.563.495.208.911.458 1.25.75.34.292.596.634.769 1.027.172.393.259.863.259 1.41v.037zm16.76 3.331h-9.52V.761h9.43v2.447h-6.698v2.536h5.894V8.19h-5.894v2.625h6.787v2.447zm-50.148 19h-2.875l-1.143-2.804h-5.287l-1.143 2.804H42l5.358-12.592h2.536l5.358 12.592zm-5-5.233l-1.661-4.054-1.662 4.054h3.323zm21.587-2.911c0 .726-.131 1.363-.393 1.91a3.9 3.9 0 0 1-1.08 1.376c-.459.37-.995.646-1.608.83a6.816 6.816 0 0 1-1.974.277h-2.09v3.751h-2.75V19.761h5.108c.75 0 1.42.104 2.01.312.589.209 1.09.503 1.5.884.41.381.726.837.946 1.367.22.53.33 1.116.33 1.759v.036zm-2.786.053v-.035c0-.62-.2-1.09-.599-1.411-.399-.322-.943-.483-1.634-.483h-2.125v3.822h2.179c.69 0 1.226-.181 1.607-.544.381-.363.572-.813.572-1.349zm19.48-.053c0 .726-.132 1.363-.393 1.91a3.9 3.9 0 0 1-1.081 1.376c-.458.37-.994.646-1.607.83a6.816 6.816 0 0 1-1.974.277h-2.09v3.751h-2.75V19.761h5.108c.75 0 1.42.104 2.01.312.589.209 1.089.503 1.5.884.41.381.726.837.946 1.367.22.53.33 1.116.33 1.759v.036zm-2.787.053v-.035c0-.62-.2-1.09-.598-1.411-.399-.322-.944-.483-1.634-.483h-2.126v3.822h2.18c.69 0 1.226-.181 1.607-.544.38-.363.571-.813.571-1.349zm21.766 8.091h-2.875l-1.143-2.804h-5.287l-1.143 2.804H94.26l5.358-12.592h2.536l5.358 12.592zm-5-5.233l-1.662-4.054-1.66 4.054h3.321zm22.497 5.233h-3.214l-2.68-4h-2.16v4h-2.751V19.761h5.715c1.489 0 2.647.363 3.474 1.09.828.726 1.241 1.738 1.241 3.036v.035c0 1.012-.247 1.837-.74 2.474a4.295 4.295 0 0 1-1.939 1.402l3.054 4.465zm-3.16-8.198v-.036c0-.595-.191-1.041-.572-1.34-.381-.297-.911-.446-1.59-.446h-2.733v3.59h2.787c.678 0 1.2-.16 1.562-.482.364-.321.545-.75.545-1.286zm19.55 8.198h-9.52V19.761h9.431v2.447h-6.698v2.536h5.894v2.447h-5.894v2.625h6.787v2.447zm16.194 0h-8.984V19.761h2.75v10.002h6.234v2.5z"
-                />
-                <path
-                  fill="url(#a)"
-                  d="M15.5 32.088c-8.56 0-15.5-6.94-15.5-15.5 0-8.56 6.94-15.5 15.5-15.5 8.56 0 15.5 6.94 15.5 15.5 0 8.56-6.94 15.5-15.5 15.5zm0-3.5c6.904 0 12.5-5.373 12.5-12s-5.596-12-12.5-12S3 9.961 3 16.588s5.596 12 12.5 12z"
-                  transform="translate(0 -.088)"
-                />
-              </g>
-            </svg>
-          </div>
-          <div className="block lg:hidden ">
-            <img
-              src={baseapparelheromobile}
-              alt="hero-image"
-              className="webkit-fill-available"
-            />
-          </div>
-          <div className="">
-            <h1 className="font-normal text-3xl lg:text-6xl text-[#f96262]">
-              WE'RE
-            </h1>
-            <span className="font-semibold text-3xl lg:text-6xl text-[#000]">
-              COMING <br />
-              SOON
-            </span>
-            <p className="text-[#ee8c8c] text-xs">
-              Hello fellow shoppers! We're currently building our new fashion
-              store. Add your email below to stay up-to-date with announcements
-              and our launch deals.
-            </p>
-          </div>
-          <div className="flex relative w-full text-[#000] lg:w-2/3 h-20">
-            <input
-            id="email"
-              type="email"
-              value={email}
-              onChange={handleChange}
-              placeholder="Email Address"
-              autoComplete="email"
-              className="peer text-sm p-2 w-full lg:w-5/6 rounded-2xl border-2 border-solid border-[#d0c7c7] h-2/3"
-            />
-            {isValid ? (
-              ""
-            ) : (
-              <FaExclamationCircle className="text-[#ee8c8c] absolute bottom-1/2 right-1/3" />
-            )}
-            <button
-              type="submit"
-              className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter hover:shadow-md  hover:backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 h-2/3 rounded-2xl"
-              onClick={onValidate}
-            >
-              <BsChevronRight className="m-auto" />
-            </button>
-            {isValid ? (
-              ""
-            ) : (
-              <p className="text-[#ee8c8c] text-sm absolute bottom-0 left-4">
-                Please provide a valid email
+    <section className="bg-[url('/baseapparel/bg-base-apparel.svg')] bg-secondary font-sans overflow-y-scroll no-scrollbar">
+      <div className="flex justify-center lg:justify-between ">
+        <div className="flex flex-col justify-center bg-[url('/bg-base-apparel.svg')] w-full lg:w-3/5">
+          <div className=" flex flex-col justify-evenly lg:justify-around items-start lg:items-start text-center lg:text-start lg:px-28 h-screen">
+            <div className="p-4">
+              <img src={logo} alt="" />
+            </div>
+            <div className="block lg:hidden ">
+              <img src={baseapparelheromobile} alt="hero-image" className="webkit-fill-available"/>
+            </div>
+            <div className="max-w-lg">
+              <h1 className="font-normal tracking-[15px] text-4xl lg:text-7xl text-[#ce9797]">
+                WE'RE <br />
+                <span className="font-semibold tracking-[20px] text-4xl lg:text-7xl text-[#000]">
+                  COMING <br />
+                  SOON
+                </span>
+              </h1>
+              <p className="text-[#ce9797] px-3 text-sm mt-2 lg:mt-8">
+                Hello fellow shoppers! We're currently building our new fashion
+                store. Add your email below to stay up-to-date with
+                announcements and our launch deals.
               </p>
-            )}
+            </div>
+            <div className="flex justify-center lg:justify-start items-center relative text-[#000] w-11/12 lg:w-4/5 h-[87px]">
+              <input
+                type="email"
+                placeholder="Email address"
+                id="email"
+                autoComplete="email"
+                {...register("email", {
+                  required: "Field cannot be empty",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "Please provide a valid email",
+                  },
+                })}
+                aria-invalid={errors.email ? "true" : "false"}
+                className="mb-3 text-sm p-2 w-5/6 rounded-2xl border-2 border-solid h-2/3 border-[#d0c7c7]"
+              />
+              {errors.email && (
+                <FaExclamationCircle className="text-[#ee8c8c] absolute right-1/3 top-1/3" />
+              )}
+              <button
+                type="submit"
+                className="absolute bg-gradient-to-r from-[#f8bfbf] to-[#ee8c8c] text-secondary right-0 hove:backdrop-filter hover:shadow-lg  hover:backdrop-blur-lg bg-opacity-30 z-10 p-3 w-1/4 mb-3 h-2/3 rounded-3xl"
+                onClick={handleSubmit(onSubmit)}
+              >
+                <BsChevronRight className="m-auto" />
+              </button>
+              {errors.email && (
+                <p className="text-[#ee8c8c] text-sm absolute left-8 lg:left-2 bottom-0">
+                  {errors.email?.message}
+                </p>
+              )}
+            </div>
           </div>
         </div>
         <div className="hidden lg:block h-screen">
-          <img
-            src={baseapparelhero}
-            alt="base apparel hero"
-            className="webkit-fill-available"
-          />
+          <img src={baseapparelhero} alt="base apparel hero" className="webkit-fill-available" />
         </div>
       </div>
     </section>

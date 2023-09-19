@@ -73,12 +73,12 @@ export default function Countries() {
         {countries.map((country) => {
           return (
             <div
-              className="card bg-[#2b3945] shadow-xl max-w-[265px]"
+              className="card bg-[#2b3945] shadow-xl w-[265px] h-[360px]"
               key={country.numericCode}
             >
               <img
                 className="object-fill h-1/2"
-                src={country.flags.svg}
+                src={country.flags.png}
                 alt={country.name + " " + "flag"}
               />
 

@@ -3,7 +3,7 @@ import RippleBackground from "./rippleAnimation";
 
 export default function Home() {
   return (
-      <main className="intro flex justify-center text-center h-screen relative">
+      <main role="main" className="intro flex justify-center text-center h-screen relative">
         <RippleBackground className=""/>
           <div className="flex flex-col justify-center items-center max-w-md px-4">
             <span className="text-3xl md:text-4xl my-2">Project's Solutions of</span>
