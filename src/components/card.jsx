@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { BsGlobe } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 

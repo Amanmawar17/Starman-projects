@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
-import Projects from "./projects";
+import Projects from "./Projects";
 
 function Navbar() {
   return (
@@ -13,19 +13,19 @@ function Navbar() {
       >
         <div className=" rounded-lg p-4">
           <div className="flex justify-between items-center max-w-5xl m-auto flex-col sm:flex-row">
-            <span className="text-3xl text-accentColor font-bold">
+            <span className="text-4xl text-accentColor font-bold">
               Starman-Projects
             </span>
             <div className="flex justify-center items-center text-lg">
               <li className="flex items-center hover:text-hoverColor">
                 <NavLink to="/">Home</NavLink>
               </li>
-              <li className="flex items-center hover:text-hoverColor px-4">
-                <NavLink to="/about">About</NavLink>
-              </li>
-              <li className="flex flex-col justify-center items-center hover:text-hoverColor group pr-4">
+              <li className="flex flex-col justify-center items-center hover:text-hoverColor group px-4">
                 Projects
                 <Projects />
+              </li>
+              <li className="flex items-center hover:text-hoverColor pr-4">
+                <NavLink to="/contact">Contact</NavLink>
               </li>
               <li className="flex items-center hover:text-hoverColor">
                 <a

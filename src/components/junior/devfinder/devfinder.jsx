@@ -9,7 +9,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { BiLink } from "react-icons/bi";
 import { FaBuilding } from "react-icons/fa";
 
-export default function Devfinder() {
+export default function DevFinder() {
 
   const [Darkmode, setDarkMode] = useState(true);
 

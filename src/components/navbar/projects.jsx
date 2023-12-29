@@ -9,6 +9,7 @@ const Projects = () => {
       <li className="hover:text-hoverColor" ><Link to="/intermediate">Intermediate</Link></li>
       <li className="hover:text-hoverColor" ><Link to="/advanced">Advanced</Link></li>
       <li className="hover:text-hoverColor" ><Link to="/database">Database</Link></li>
+      <li className="hover:text-hoverColor" ><Link to="/miscellaneous">Miscellaneous</Link></li>
     </ul>
   );
 };

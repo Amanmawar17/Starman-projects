@@ -1,4 +1,4 @@
-import Card from "../components/card";
+import Card from "../Components/Card";
 
 
 const DatabaseData = [
@@ -35,7 +35,7 @@ export default function Database() {
   return (
     <>
       <div className="w-full min-h-screen py-10">
-        <h1 className="text-2xl text-center font-semibold">
+        <h1 className="text-3xl text-center font-semibold">
           <span className="text-hoverColor">Database</span> Project
         </h1>
         <Card details={DatabaseData} />

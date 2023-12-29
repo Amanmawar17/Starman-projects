@@ -1,7 +1,9 @@
-import Card from "../components/card";
+import Card from "../Components/Card";
 
 import countries from "../assets/countries-desktop-preview.jpg";
 import promodor from "../assets/promodor-preview.jpg";
+import rps from "../assets/rps-preview.jpg";
+import multi from "../assets/multi-step.jpg";
 
 const AdvancedData = [
   {
@@ -49,6 +51,24 @@ const AdvancedData = [
     img: "",
     tag: "av",
   },
+  {
+    id: 6,
+    title: "Multi-step-form",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    preview: "",
+    code: "",
+    img: multi,
+    tag: "av",
+  },
+  {
+    id: 7,
+    title: "Rock Paper Sicssor",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    preview: "",
+    code: "",
+    img: rps,
+    tag: "av",
+  },
   
 ];
 
@@ -56,7 +76,7 @@ export default function Advanced() {
   return (
     <>
       <div className="w-full min-h-screen py-10">
-        <h1 className="text-2xl text-center font-semibold">
+        <h1 className="text-3xl text-center font-semibold">
           <span className="text-hoverColor">Advanced</span> Project
         </h1>
         <Card details={AdvancedData} />

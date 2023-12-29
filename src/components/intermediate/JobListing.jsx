@@ -3,16 +3,6 @@ import { useState, useEffect } from "react";
 import jobs from "../../data/job_data.json";
 import desktop from "/filter_job/bg-header-desktop.svg";
 import mobile from "/filter_job/bg-header-mobile.svg";
-import account from "/filter_job/account.svg";
-import photosnap from "/filter_job/photosnap.svg";
-import eyecam from "/filter_job/eyecam-co.svg";
-import manage from "/filter_job/manage.svg";
-import insure from "/filter_job/insure.svg";
-import myhome from "/filter_job/myhome.svg";
-import air from "/filter_job/the-air-filter-company.svg";
-import shortly from "/filter_job/shortly.svg";
-import faceit from "/filter_job/faceit.svg";
-import loop from "/filter_job/loop-studios.svg";
 
 export default function JobListing() {
   const [clicked, setclicked] = useState(null);
@@ -22,6 +12,8 @@ export default function JobListing() {
   const filterRemoved = () => {
     setclicked(null);
   };
+
+
   return (
     <div className="overflow-y-scroll no-scrollbar bg-[#effafa]">
       <div className="bg-[#5ba4a4] w-full mb-8">
@@ -72,7 +64,7 @@ export default function JobListing() {
                         >
                           FEATURED
                         </button>
-                        <hr className="aboslute rotate-90 left-0 text-[#5ba4a4] w-1" />
+                        <hr className="aboslute rotate-90 left-0 text-[#5ba4a4]" />
                       </>
                     ) : (
                       ""

@@ -1,6 +1,6 @@
 import qrcode from "/image-qr-code.png"
 
-const QRcode = () => {
+const QRCode = () => {
   return (
     <div className="flex h-screen bg-[#d6e2f0] overflow-y-scroll no-scrollbar">
       <div className="flex flex-col justify-center items-center bg-[#ffffff] max-w-xs m-auto bg-white 
@@ -26,4 +26,4 @@ const QRcode = () => {
   );
 };
 
-export default QRcode;
+export default QRCode;

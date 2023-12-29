@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useFieldArray, Controller  } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 
@@ -17,21 +17,24 @@ export default function Newsletter() {
   const [email, setEmail] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
-  function reset() {
+  function refresh() {
     setIsSuccess(false);
   }
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
+
   const onSubmit = (data) => {
     const email = data.email;
     console.log(email);
     setEmail(email);
     setIsSuccess(true);
+    reset();
   };
 
   return (
@@ -51,7 +54,7 @@ export default function Newsletter() {
                 and click the button inside to confirm your subscription.
               </p>
               <button
-                onClick={reset}
+                onClick={refresh}
                 className="bg-[#242742] hover:bg-gradient-to-br from-[#ff6257] to-[#ffab57] text-[#fff] font-semibold mt-2 py-4 px-8 rounded-md w-full"
               >
                 Dismiss message
@@ -104,7 +107,7 @@ export default function Newsletter() {
               </div>
               <div className="flex flex-col justify-center lg:justify-start items-start mt-4 w-full lg:w-4/5">
                 <div className="flex justify-between items-center mb-2 webkit-fill-available">
-                  <div className="font-semibold">Email address</div>
+                  <h1 className="font-semibold">Email address</h1>
                   <div className="text-[#ee8c8c] text-sm">
                     {errors.email && <p>{errors.email?.message}</p>}
                   </div>
