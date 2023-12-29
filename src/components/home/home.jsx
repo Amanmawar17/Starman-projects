@@ -2,7 +2,6 @@ import { Tilt } from "react-tilt";
 import RippleBackground from "./RippleAnimation";
 import hero from "../../assets/starman-home.png";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer";
 
 export default function Home() {
   const defaultOptions = {
@@ -19,39 +18,42 @@ export default function Home() {
 
   return (
     <>
-    <Navbar/>
-    <main role="main" className="intro flex justify-between h-[90vh] relative">
-      <RippleBackground />
-      <div className="grid place-items-center h-full w-1/2">
-        <div className="p-20">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
-            Project's Solutions of <br />
-            <a href="https://www.frontendmentor.io/" target="_blank">
-              <span className="text-3xl font-sans md:text-4xl  text-accentColor underline cursor-pointer">
-                Frontend Mentor
-              </span>
+      <main
+        role="main"
+        className="intro flex justify-between h-[90vh] relative"
+      >
+        <RippleBackground />
+        <div className="grid place-items-center h-full w-1/2">
+          <div className="p-20">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
+              Project's Solutions of <br />
+              <a href="https://www.frontendmentor.io/" target="_blank">
+                <span className="text-3xl font-sans md:text-4xl  text-accentColor underline cursor-pointer">
+                  Frontend Mentor
+                </span>
+              </a>
+            </h1>
+            <p className="text-xl my-2 max-w-xl">
+              I just made this site for
+              <span className="text-accentColor"> shwocasing</span> the
+              components which i made for frontend practices, I took projects
+              from the site Frontend Mentor.
+            </p>
+            <a href="https://frieden.me/" target="_blank">
+              <button className="text-hoverColor bg-card hover:bg-secondary hover:text-accentColor rounded px-6 py-2">
+                Portfolio
+              </button>
             </a>
-          </h1>
-          <p className="text-xl my-2 max-w-xl">
-            I just made this site for
-            <span className="text-accentColor"> shwocasing</span> the components
-            which i made for frontend practices, I took projects from the site
-            Frontend Mentor.
-          </p>
-          <a href="https://frieden.me/" target="_blank">
-          <button className="text-hoverColor bg-card hover:bg-secondary hover:text-accentColor rounded px-6 py-2">Portfolio</button>
-          </a>
-        </div>
-      </div>
-      <div className="w-1/2 grid place-items-center">
-        <Tilt option={defaultOptions}>
-          <div className="m-auto">
-            <img src={hero} alt="hero" />
           </div>
-        </Tilt>
-      </div>
-    </main>
-    <Footer/>
+        </div>
+        <div className="w-1/2 grid place-items-center">
+          <Tilt option={defaultOptions}>
+            <div className="m-auto">
+              <img src={hero} alt="hero" />
+            </div>
+          </Tilt>
+        </div>
+      </main>
     </>
   );
 }

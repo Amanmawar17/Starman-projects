@@ -19,16 +19,17 @@ export default function BaseApparel() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {console.log(data); reset();}
 
   return (
-    <section className="bg-[url('/baseapparel/bg-base-apparel.svg')] bg-secondary font-sans overflow-y-scroll no-scrollbar">
+    <section className="bg-secondary font-sans overflow-y-scroll no-scrollbar bg-gradient-to-tr from-[#fff] to-[#fff5f5]">
       <div className="flex justify-center lg:justify-between ">
-        <div className="flex flex-col justify-center bg-[url('/bg-base-apparel.svg')] w-full lg:w-3/5">
+        <div className="flex flex-col justify-center w-full lg:w-3/5">
           <div className=" flex flex-col justify-evenly lg:justify-around items-start lg:items-start text-center lg:text-start lg:px-28 h-screen">
             <div className="p-4">
               <img src={logo} alt="" />

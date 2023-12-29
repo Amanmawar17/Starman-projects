@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
+import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
 import Newbie from "./Screens/Newbie";
@@ -45,14 +46,16 @@ import RockPaperSissor from "./Components/Advanced/RockPaperSissor";
 export default function App() {
   return (
     <Routes>
-      <Route index element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/newbie" element={<Newbie />} />
-      <Route path="/junior" element={<Junior />} />
-      <Route path="/intermediate" element={<Intermediate />} />
-      <Route path="/advanced" element={<Advanced />} />
-      <Route path="/database" element={<Database />} />
-      <Route path="/miscellaneous" element={<Miscellaneous />} />
+      <Route element={<Navbar />}>
+        <Route index element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/newbie" element={<Newbie />} />
+        <Route path="/junior" element={<Junior />} />
+        <Route path="/intermediate" element={<Intermediate />} />
+        <Route path="/advanced" element={<Advanced />} />
+        <Route path="/database" element={<Database />} />
+        <Route path="/miscellaneous" element={<Miscellaneous />} />
+      </Route>
       <Route path="*" element={<NotFound />} />
 
       <Route path="newbie/qrcode" element={<QrCode />} />
