@@ -1,7 +1,6 @@
 import { Tilt } from "react-tilt";
 import RippleBackground from "./RippleAnimation";
 import hero from "../../assets/starman-home.png";
-import Navbar from "../Navbar/Navbar";
 
 export default function Home() {
   const defaultOptions = {
