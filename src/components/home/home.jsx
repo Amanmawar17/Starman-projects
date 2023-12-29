@@ -1,6 +1,8 @@
 import { Tilt } from "react-tilt";
 import RippleBackground from "./RippleAnimation";
 import hero from "../../assets/starman-home.png";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer";
 
 export default function Home() {
   const defaultOptions = {
@@ -16,6 +18,8 @@ export default function Home() {
   };
 
   return (
+    <>
+    <Navbar/>
     <main role="main" className="intro flex justify-between h-[90vh] relative">
       <RippleBackground />
       <div className="grid place-items-center h-full w-1/2">
@@ -47,5 +51,7 @@ export default function Home() {
         </Tilt>
       </div>
     </main>
+    <Footer/>
+    </>
   );
 }

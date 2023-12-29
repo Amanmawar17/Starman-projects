@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Front from "./Components/Front";
 import Home from "./Components/Home/Home";
 import Contact from "./Components/Contact/Contact";
 import Newbie from "./Screens/Newbie";
@@ -38,26 +37,22 @@ import ChatAppIllustration from "./Components/Intermediate/ChatAppIllustration";
 import CommentSection from "./Components/Intermediate/CommentSection";
 import ProductPage from "./Components/Intermediate/ProductPage";
 
-
 import Countries from "./Components/Advanced/Countries";
 import Promodor from "./Components/Advanced/Promodor";
 import MultiStepForm from "./Components/Advanced/MultiStepForm";
 import RockPaperSissor from "./Components/Advanced/RockPaperSissor";
 
-
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Front />}>
-        <Route index element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/newbie" element={<Newbie />} />
-        <Route path="/junior" element={<Junior />} />
-        <Route path="/intermediate" element={<Intermediate />} />
-        <Route path="/advanced" element={<Advanced />} />
-        <Route path="/database" element={<Database />} />
-        <Route path="/miscellaneous" element={<Miscellaneous />} />
-      </Route>
+      <Route index element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/newbie" element={<Newbie />} />
+      <Route path="/junior" element={<Junior />} />
+      <Route path="/intermediate" element={<Intermediate />} />
+      <Route path="/advanced" element={<Advanced />} />
+      <Route path="/database" element={<Database />} />
+      <Route path="/miscellaneous" element={<Miscellaneous />} />
       <Route path="*" element={<NotFound />} />
 
       <Route path="newbie/qrcode" element={<QrCode />} />
