@@ -3,17 +3,15 @@ import { NavLink, Outlet } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
 import Projects from "./Projects";
-import Footer from "../Footer";
 
-function Navbar() {
+export default function Navbar() {
   return (
     <>
-      <div className="bg-primary text-secondary">
         <nav
           role="navigation"
-          className="sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-100 z-10 mx-auto sm:h-16"
+          className="sticky top-0 backdrop-filter backdrop-blur-lg bg-opacity-30 z-10 mx-auto"
         >
-          <div className=" rounded-lg p-4">
+          <div className=" rounded-lg p-2 md:p-4 ">
             <div className="flex justify-between items-center max-w-5xl m-auto flex-col sm:flex-row">
               <span className="text-4xl text-accentColor font-bold">
                 Starman-Projects
@@ -42,10 +40,6 @@ function Navbar() {
           </div>
         </nav>
         <Outlet />
-      </div>
-      <Footer />
     </>
   );
 }
-
-export default Navbar;

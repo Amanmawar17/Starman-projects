@@ -4,16 +4,16 @@ const RippleBackground = () => {
   useEffect(() => {
     const rippleBackground = document.createElement('div');
     rippleBackground.className = 'ripple-background';
-    rippleBackground.style.background = '#7F848F';
+    rippleBackground.style.background = '#508fb9';
 
     const circles = Array.from({ length: 5 }, (_, index) => {
       const circle = document.createElement('div');
       circle.className = `circle ${index === 0 ? 'xxlarge' : index === 1 ? 'xlarge' : index === 2 ? 'large' : index === 3 ? 'medium' : 'small'} shade${index + 1}`;
       circle.style.position = 'absolute';
       circle.style.borderRadius = '50%';
-      circle.style.background = '#7F848F';
+      circle.style.background = '#508fb9';
       circle.style.animation = 'ripple 15s infinite';
-      circle.style.boxShadow = '0px 0px 2px 0px #508fb9';
+      circle.style.boxShadow = '0px 0px 2px 0px #7F848F';
       circle.style.width = `${200 + 200 * index}px`;
       circle.style.height = `${200 + 200 * index}px`;
       circle.style.left = `${-100 - 100 * index}px`;
