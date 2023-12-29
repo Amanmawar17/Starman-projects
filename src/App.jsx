@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./Components/Home/Home";
-import Contact from "./Components/Contact/Contact";
+import Home from "./Components/HomeSection/Home";
+import Contact from "./Components/ContactSection/Contact";
 import Newbie from "./Screens/Newbie";
 import Junior from "./Screens/Junior";
 import Intermediate from "./Screens/Intermediate";
