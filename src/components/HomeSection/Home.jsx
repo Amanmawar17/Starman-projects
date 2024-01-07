@@ -1,6 +1,7 @@
 import { Tilt } from "react-tilt";
 import RippleBackground from "./RippleAnimation";
 import hero from "../../assets/starman-home.png";
+import Navbar from "../Navbar/Navbar";
 
 export default function Home() {
   const defaultOptions = {
@@ -22,7 +23,7 @@ export default function Home() {
         className="intro flex justify-between h-[90vh] relative"
       >
         <RippleBackground />
-        <div className="grid place-items-center h-full w-1/2">
+        <div className="grid place-items-center h-full w-1/2 text-secondary">
           <div className="p-20">
             <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
               Project's Solutions of <br />

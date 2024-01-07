@@ -35,7 +35,7 @@ export default function Database() {
   return (
     <>
       <div className="w-full min-h-screen py-10">
-        <h1 className="text-3xl text-center font-semibold">
+        <h1 className="text-3xl text-center text-secondary font-semibold">
           <span className="text-hoverColor">Database</span> Project
         </h1>
         <Card details={DatabaseData} />

@@ -41,17 +41,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="h-[90vh] py-10">
+    <section className="md:h-[90vh] py-10 text-secondary">
       <h1 className="text-3xl text-center font-semibold">
         Let`s<span className="text-hoverColor"> connect</span>
       </h1>
-      <div className="flex justify-between h-full">
-        <div className="grid place-content-center w-1/2 h-full">
+      <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between h-full">
+        <div className="grid place-content-center w-full md:w-1/2 h-full">
           <form className="max-w-lg mx-auto ">
             <div className="mb-5">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
               >
                 Name
               </label>
@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="mb-5">
               <label
                 htmlFor="email"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
               >
                 Email
               </label>
@@ -93,7 +93,7 @@ const Contact = () => {
             <div className="mb-5">
               <label
                 htmlFor="message"
-                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
               >
                 Message
               </label>
@@ -115,7 +115,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="w-1/2 grid place-content-center relative">
+        <div className=" w-full md:w-1/2 h-[80vh] md:h-full grid place-content-center relative">
           <div className="absolute inset-y-1/3 inset-x-1/3">
             <Deck />
           </div>

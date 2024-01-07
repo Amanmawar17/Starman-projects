@@ -88,7 +88,7 @@ export default function Newbie() {
   return (
     <>
       <div className="w-full min-h-screen py-10">
-        <h1 className="text-3xl text-center font-semibold">
+        <h1 className="text-3xl text-center text-secondary font-semibold">
           <span className="text-hoverColor">Newbie</span> Project
         </h1>
         <Card details={NewbieData} name="Newbie" />

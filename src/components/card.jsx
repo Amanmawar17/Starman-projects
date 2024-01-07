@@ -7,7 +7,7 @@ export default function Card(props) {
       <div className="grid grid-cols-1 gap-3 grid-flow-row md:grid-cols-2 lg:grid-cols-3">
       {props.details.map((value) => {
         return (
-            <div className="flex justify-evenly px-4 my-3" key={value.id}>
+            <div className="flex justify-evenly px-4 my-3 text-secondary" key={value.id}>
               <div className="bg-card max-w-xs rounded overflow-hidden shadow-2xl">
                 <img
                   className="w-full object-cover h-48"

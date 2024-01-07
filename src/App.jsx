@@ -3,12 +3,12 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./Components/HomeSection/Home";
 import Contact from "./Components/ContactSection/Contact";
-import Newbie from "./Screens/Newbie";
-import Junior from "./Screens/Junior";
-import Intermediate from "./Screens/Intermediate";
-import Advanced from "./Screens/Advanced";
-import Database from "./Screens/Database";
-import Miscellaneous from "./Screens/Miscellaneous";
+import Newbie from "./screens/Newbie";
+import Junior from "./screens/Junior";
+import Intermediate from "./screens/Intermediate";
+import Advanced from "./screens/Advanced";
+import Database from "./screens/Database";
+import Miscellaneous from "./screens/Miscellaneous";
 
 import NotFound from "./Components/NotFound";
 
@@ -25,11 +25,11 @@ import Advicegen from "./Components/Junior/AdviceGen";
 import DevFinder from "./Components/Junior/DevFinder/DevFinder";
 import Newsletter from "./Components/Junior/Newsletter";
 import AgeCalculator from "./Components/Junior/AgeCalculator/AgeCalculator";
-import Fylo from "./Pages/FyloDark";
-import Blogr from "./Pages/Blogr";
+import Fylo from "./pages/FyloDark";
+import Blogr from "./pages/Blogr";
 
 import IpTracker from "./Components/Intermediate/IpTracker";
-import UrlShortening from "./Pages/UrlShortening";
+import UrlShortening from "./pages/UrlShortening";
 import JobListing from "./Components/Intermediate/JobListing";
 import SpaceTravel from "./Components/Intermediate/SpaceTravel/SpaceTravel";
 import Calculator from "./Components/Intermediate/Calculator";
@@ -41,20 +41,20 @@ import Countries from "./Components/Advanced/Countries";
 import Promodor from "./Components/Advanced/Promodor";
 import MultiStepForm from "./Components/Advanced/MultiStepForm";
 import RockPaperSissor from "./Components/Advanced/RockPaperSissor";
-import Start from "./Components/Start";
+import Navbar from "./Components/Navbar/Navbar";
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Start />}>
+      <Route element={<Navbar />}>
         <Route index element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/newbie" element={<Newbie />} />
-        <Route path="/junior" element={<Junior />} />
-        <Route path="/intermediate" element={<Intermediate />} />
-        <Route path="/advanced" element={<Advanced />} />
-        <Route path="/database" element={<Database />} />
-        <Route path="/miscellaneous" element={<Miscellaneous />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="newbie" element={<Newbie />} />
+        <Route path="junior" element={<Junior />} />
+        <Route path="intermediate" element={<Intermediate />} />
+        <Route path="advanced" element={<Advanced />} />
+        <Route path="database" element={<Database />} />
+        <Route path="miscellaneous" element={<Miscellaneous />} />
       </Route>
       <Route path="*" element={<NotFound />} />
 
