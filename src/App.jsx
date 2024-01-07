@@ -25,11 +25,11 @@ import Advicegen from "./Components/Junior/AdviceGen";
 import DevFinder from "./Components/Junior/DevFinder/DevFinder";
 import Newsletter from "./Components/Junior/Newsletter";
 import AgeCalculator from "./Components/Junior/AgeCalculator/AgeCalculator";
-import Fylo from "./pages/FyloDark";
-import Blogr from "./pages/Blogr";
+import Fylo from "./pages/fylo/FyloDark";
+import Blogr from "./pages/blogr/Blogr";
 
 import IpTracker from "./Components/Intermediate/IpTracker";
-import UrlShortening from "./pages/UrlShortening";
+import UrlShortening from "./pages/urlShortner/UrlShortening";
 import JobListing from "./Components/Intermediate/JobListing";
 import SpaceTravel from "./Components/Intermediate/SpaceTravel/SpaceTravel";
 import Calculator from "./Components/Intermediate/Calculator";
