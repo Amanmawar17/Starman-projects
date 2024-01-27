@@ -7,34 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-.github
 node_modules
-base-apparel-coming-soon-master
-blogr-landing-page-main
-four-card-feature-section-master
-fylo-dark-theme-landing-page-master
-qr-code-component-main
-ip-address-tracker-master
-rest-countries-api-with-color-theme-switcher-master
-static-job-listings-master
-url-shortening-api-master
-advice-generator-app-main
-space-tourism-website-main
-age-calculator-app-main
-calculator-app-main
-newsletter-sign-up-with-success-message-main
-product-preview-card-component-main
-faq-accordion-card-main
-results-summary-component-main
-rock-paper-scissors-master
-multi-step-form-main
-interactive-comments-section-main
-ecommerce-product-page-main
-chat-app-css-illustration-master
-Github-user-search-app
-nft-preview-card-component-main
-article-preview-component-master
-
+dist
 dist-ssr
 *.local
 
@@ -48,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-.vercel
-
-.vercel

@@ -1,7 +1,5 @@
 import { Tilt } from "react-tilt";
-import RippleBackground from "./RippleAnimation";
 import hero from "../../assets/starman-home.png";
-import Navbar from "../Navbar/Navbar";
 
 export default function Home() {
   const defaultOptions = {
@@ -20,14 +18,13 @@ export default function Home() {
     <>
       <main
         role="main"
-        className="intro flex justify-between h-[90vh] relative"
+        className="intro flex justify-evenly items-center h-[90vh] relative"
       >
-        <RippleBackground />
         <div className="grid place-items-center h-full w-1/2 text-secondary">
           <div className="p-20">
             <h1 className="text-3xl md:text-4xl lg:text-5xl my-2">
-              Project's Solutions of <br />
-              <a href="https://www.frontendmentor.io/" target="_blank">
+              Project&#39;s Solutions of <br />
+              <a href="https://www.frontendmentor.io/" target="_blank" rel="noreferrer">
                 <span className="text-3xl font-sans md:text-4xl  text-accentColor underline cursor-pointer">
                   Frontend Mentor
                 </span>
@@ -35,12 +32,12 @@ export default function Home() {
             </h1>
             <p className="text-xl my-2 max-w-xl">
               I just made this site for
-              <span className="text-accentColor"> shwocasing</span> the
+              <span className="text-hoverColor"> shwocasing</span> the
               components which i made for frontend practices, I took projects
               from the site Frontend Mentor.
             </p>
-            <a href="https://frieden.me/" target="_blank">
-              <button className="text-hoverColor bg-card hover:bg-secondary hover:text-accentColor rounded px-6 py-2">
+            <a href="https://frieden.me/" target="_blank" rel="noreferrer" >
+              <button className="bg-card outline outline-1 outline-secondary hover:bg-secondary text-accentColor text-lg font-medium rounded px-6 py-2">
                 Portfolio
               </button>
             </a>

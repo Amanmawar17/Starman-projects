@@ -6,10 +6,10 @@ export default {
   ],
   theme: {
     colors: {
-      "primary": "#0E1525",
-      "secondary": "#ffffff",
+      "primary": "#FEFEFA",
+      "secondary": "#0E1525",
       "accentColor": "#FC440F",
-      "card": "#2B3245",
+      "card": "#FFFAFA",
       "hoverColor": "#bfff00"
     },
     extend: {},

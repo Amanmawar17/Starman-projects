@@ -18,7 +18,7 @@
     height: -webkit-fill-available;
   }
   ::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
   }
 
   /* Track */

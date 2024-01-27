@@ -1,4 +1,4 @@
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 
 const MiscellaneousData = [
@@ -38,7 +38,11 @@ export default function Miscellaneous() {
         <h1 className="text-3xl text-center text-secondary font-semibold">
           <span className="text-hoverColor">Miscellaneous</span> Project
         </h1>
-        <Card details={MiscellaneousData} />
+        <section className="my-10 px-10">
+          <div className="grid grid-cols-1 gap-14 grid-flow-row md:grid-cols-2 lg:grid-cols-3">
+            {MiscellaneousData.map((item, index) => <Card details={item} key={index} />)}
+          </div>
+        </section>
       </div>
     </>
   );

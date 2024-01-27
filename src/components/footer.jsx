@@ -1,15 +1,14 @@
-import React from "react";
 import { AiFillHeart } from "react-icons/ai";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer role="contentinfo" className="bg-[#0c1221] text-secondary">
+    <footer role="contentinfo" className="border-t-2 border-secondary">
       <div className="flex justify-evenly items-center flex-col md:flex-row md:h-10 py-6">
         <h3 className="flex items-center">
           Made by
           <span className="hover:text-hoverColor hover:underline mx-2">
-            <a href="https://amanmawar17.github.io/portfolio/" target="_blank">
+            <a href="https://amanmawar17.github.io/portfolio/" target="_blank" rel="noreferrer">
               Aman mawar
             </a>
           </span>
@@ -21,13 +20,13 @@ const Footer = () => {
           <li className="mx-3 hover:text-hoverColor">
             <a
               href="https://www.linkedin.com/in/aman-mawar-2139161b1/"
-              target="_blank"
+              target="_blank"  rel="noreferrer"
             >
               <FaLinkedin />
             </a>
           </li>
           <li className="hover:text-hoverColor">
-            <a href="https://github.com/Amanmawar17" target="_blank">
+            <a href="https://github.com/Amanmawar17" target="_blank"  rel="noreferrer">
               <FaGithub />
             </a>
           </li>

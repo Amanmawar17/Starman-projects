@@ -1,4 +1,4 @@
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 import qrcode from "../assets/qrcode.jpg";
 import fourcard from "../assets/fourcardpreview.jpg";
@@ -91,7 +91,13 @@ export default function Newbie() {
         <h1 className="text-3xl text-center text-secondary font-semibold">
           <span className="text-hoverColor">Newbie</span> Project
         </h1>
-        <Card details={NewbieData} name="Newbie" />
+        <section className="my-10 px-10">
+          <div className="grid grid-cols-1 gap-14 grid-flow-row md:grid-cols-2 lg:grid-cols-3">
+            {NewbieData.map((item, index) => 
+              <Card details={item} key={index} />
+            )}
+          </div>
+        </section>
       </div>
     </>
   );

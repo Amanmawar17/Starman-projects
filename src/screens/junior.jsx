@@ -1,4 +1,4 @@
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 import fylodark from "../assets/fylodark.jpg";
 import advicegen from "../assets/advicegenpreview.jpg";
@@ -71,7 +71,11 @@ export default function Junior() {
         <h1 className="text-3xl text-center text-secondary font-semibold">
           <span className="text-hoverColor">Junior</span> Project
         </h1>
-        <Card details={JuniorData} />
+        <section className="my-10 px-10">
+          <div className="grid grid-cols-1 gap-14 grid-flow-row md:grid-cols-2 lg:grid-cols-3">
+            {JuniorData.map((item, index) => <Card details={item} key={index} />)}
+          </div>
+        </section>
       </div>
     </>
   );
