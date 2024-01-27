@@ -1,4 +1,3 @@
-import React from "react";
 import desktop from "/product-desktop.jpg";
 import mobile from "/product-mobile.jpg";
 import { AiOutlineShoppingCart } from "react-icons/ai";

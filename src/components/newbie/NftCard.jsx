@@ -1,5 +1,3 @@
-import React from "react";
-
 import product from "/nft_card/image-equilibrium.jpg"; 
 import avatar from "/nft_card/image-avatar.png"; 
 
@@ -15,7 +13,7 @@ const NftCard = () => {
         <div id="card-body" className="" >
           <h1 className="mt-4 font-bold hover:text-[#00fff7]">Equilibrium #3429</h1>
           <p className="my-4 text-[#8bacda]">Our Equilibrium collection promotes balance and calm.</p>
-          <div class="flex justify-between items-center mb-4">
+          <div className="flex justify-between items-center mb-4">
             <p className="text-[#00fff7]">0.041 ETH</p>
             <p className="">3 days left</p>
           </div>

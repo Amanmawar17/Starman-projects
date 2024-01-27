@@ -1,4 +1,3 @@
-import React from "react";
 import { BsChatDots, BsEye, BsLightning } from "react-icons/bs";
 import { FaBrain } from "react-icons/fa";
 

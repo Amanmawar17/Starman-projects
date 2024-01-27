@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import desktop from "/faq/desktop.svg";
 import mobile from "/faq/mobile.svg";
 import box from "/faq/box-desktop.svg";
