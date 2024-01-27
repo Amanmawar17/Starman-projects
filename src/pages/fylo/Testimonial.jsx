@@ -1,5 +1,3 @@
-import React from "react";
-
 import profile1 from "/fylo/profile-1.jpg";
 import profile2 from "/fylo/profile-2.jpg";
 import profile3 from "/fylo/profile-3.jpg";

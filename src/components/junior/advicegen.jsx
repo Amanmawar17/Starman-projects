@@ -1,4 +1,3 @@
-import React from "react";
 import { useEffect, useState } from "react";
 
 
@@ -43,7 +42,7 @@ const Advicegen = () => {
           Advice #{advice.id}
         </h1>
           <p className="text-xl text-[#cee3e9] font-sans font-bold ">
-            "{advice.advice}"
+            `{advice.advice}`
           </p>
           {screenWidth < 600 ? (<span className="mobile mb-3">
             <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg">

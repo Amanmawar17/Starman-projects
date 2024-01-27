@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 import { FaGithub } from "react-icons/fa";
@@ -31,7 +30,7 @@ export default function Navbar() {
               <li className="flex items-center hover:text-hoverColor">
                 <a
                   href="https://github.com/Amanmawar17/frontend-projects"
-                  target="_blank"
+                  target="_blank" rel="noreferrer"
                 >
                   <FaGithub />
                 </a>

@@ -4,7 +4,7 @@ export default function ErrorPage() {
     <div id="error-page" className="grid text-center place-content-center h-screen">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
-      <p>URL doesn't exist.</p>
+      <p>URL doesn`t exist.</p>
       <p>
         {/* <i>{error.statusText || error.message}</i> */}
       </p>

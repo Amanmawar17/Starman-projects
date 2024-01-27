@@ -1,4 +1,4 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { FiSearch } from "react-icons/fi";
@@ -87,7 +87,6 @@ export default function DevFinder() {
       name,
       login,
       bio,
-      date,
       following,
       followers,
       public_repos,

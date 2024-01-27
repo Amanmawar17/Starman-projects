@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+/* eslint-disable react/prop-types */
+import { useState } from 'react'
 import { useSprings, animated, to as interpolate } from '@react-spring/web'
-import { useDrag } from 'react-use-gesture'
+import { useDrag } from '@use-gesture/react'
 import styles from './styles.module.css'
 
 const cards = [
@@ -20,7 +21,7 @@ const to = (i) => ({
   rot: -10 + Math.random() * 20,
   delay: i * 100,
 })
-const from = (_i) => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
+const from = () => ({ x: 0, rot: 0, scale: 1.5, y: -1000 })
 // This is being used down there in the view, it interpolates rotation and scale into a css transform
 const trans = (r, s) =>
   `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
@@ -75,4 +76,3 @@ export default function Deck() {
     </>
   )
 }
-  

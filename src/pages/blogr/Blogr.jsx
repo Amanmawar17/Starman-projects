@@ -5,7 +5,6 @@ import illmobile from "/blogr/illustration-editor-mobile.svg";
 import phones from "/blogr/illustration-phones.svg";
 import circle from "/blogr/bg-pattern-circles.svg";
 
-import React from "react";
 import BlogrNavbar from "./BlogrNavbar";
 import BlogrFooter from "./BlogrFooter";
 
@@ -82,7 +81,7 @@ const Blogr = () => {
               Flexible content management enables users to easily move through
               posts. Increase the usability of your blog by addding customized
               categories, sections, format, or flow. With this functionality,
-              you're in full control.
+              you`re in full control.
             </p>
           </div>
         </div>

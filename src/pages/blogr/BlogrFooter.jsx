@@ -1,4 +1,3 @@
-import React from "react";
 import lapdesktop from "/blogr/illustration-laptop-desktop.svg";
 import lapmobile from "/blogr/illustration-laptop-mobile.svg";
 import logo from "/blogr/logo.svg";

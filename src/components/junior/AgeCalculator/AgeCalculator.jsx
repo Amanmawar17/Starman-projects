@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import AgeInput from './AgeInput';
 
@@ -63,7 +63,7 @@ export default function AgeCalculator () {
     }
   
     setYears(y-year);
-  };
+  }
   
   return (
     <section className='grid place-content-center h-screen bg-[#dbdbdb]'>

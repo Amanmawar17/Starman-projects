@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import arrow from '/age-arrow.svg'
 
@@ -27,7 +29,7 @@ function AgeInput({calculate}) {
     } else {
       setValidDate(true);
     }
-  }, [states]);
+  }, states);
 
   useEffect(() => {
     setRequiredDay(false);
@@ -178,7 +180,7 @@ function AgeInput({calculate}) {
       calculate(year, month, day, daysInMonth);
       console.log(day, month, year)
     }
-  };
+  }
   
 
   return (

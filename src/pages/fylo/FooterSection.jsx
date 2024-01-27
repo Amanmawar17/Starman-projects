@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "/fylo/logo.svg";
 import {
   FaFacebook,

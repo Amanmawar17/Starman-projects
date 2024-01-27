@@ -1,4 +1,3 @@
-import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -39,14 +38,14 @@ export default function BaseApparel() {
             </div>
             <div className="max-w-lg">
               <h1 className="font-normal tracking-[15px] text-4xl lg:text-7xl text-[#ce9797]">
-                WE'RE <br />
+                WE`RE <br />
                 <span className="font-semibold tracking-[20px] text-4xl lg:text-7xl text-[#000]">
                   COMING <br />
                   SOON
                 </span>
               </h1>
               <p className="text-[#ce9797] px-3 text-sm mt-2 lg:mt-8">
-                Hello fellow shoppers! We're currently building our new fashion
+                Hello fellow shoppers! We`re currently building our new fashion
                 store. Add your email below to stay up-to-date with
                 announcements and our launch deals.
               </p>

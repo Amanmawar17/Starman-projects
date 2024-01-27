@@ -1,5 +1,3 @@
-import React from "react";
-
 import comp from "/fylo/comp.svg";
 import secu from "/fylo/secu.svg";
 import real from "/fylo/real.svg";
@@ -38,7 +36,7 @@ const Feature = () => {
           <img src={store} alt="storage" />
           <h1 className="text-lg">Store any type of file</h1>
           <p className="my-2">
-            Whether you're sharing holidays photos or work documents, Fylo has
+            Whether you`re sharing holidays photos or work documents, Fylo has
             you covered allowing for all file types to be securely stored and
             shared.
           </p>

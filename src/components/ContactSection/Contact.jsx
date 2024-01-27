@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -14,9 +13,6 @@ const schema = yup
   .required();
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
 
   const {
     register,
@@ -34,9 +30,6 @@ const Contact = () => {
     console.log(name);
     console.log(email);
     console.log(message);
-    setName(name);
-    setEmail(email);
-    setMessage(message);
     reset();
   };
 
