@@ -1,27 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./Components/HomeSection/Home";
-import Contact from "./Components/ContactSection/Contact";
+import Home from "./components/HomeSection/Home";
+import Contact from "./components/ContactSection/Contact";
 import Newbie from "./screens/Newbie";
 import Junior from "./screens/Junior";
 import Database from "./screens/Database";
 import Miscellaneous from "./screens/Miscellaneous";
 
-import NotFound from "./Components/NotFound";
+import NotFound from "./components/NotFound";
 
-import QrCode from "./Components/Newbie/QrCode";
-import FourCard from "./Components/Newbie/FourCards";
-import BaseApparel from "./Components/Newbie/BaseApparel";
-import ProductReview from "./Components/Newbie/ProductReview";
-import ResultsSummary from "./Components/Newbie/ResultsSummary";
-import NftCard from "./Components/Newbie/NftCard";
-import Faq from "./Components/Newbie/Faq";
-import Article from "./Components/Newbie/Article";
+import QrCode from "./components/Newbie/QrCode";
+import FourCard from "./components/Newbie/FourCards";
+import BaseApparel from "./components/Newbie/BaseApparel";
+import ProductReview from "./components/Newbie/ProductReview";
+import ResultsSummary from "./components/Newbie/ResultsSummary";
+import NftCard from "./components/Newbie/NftCard";
+import Faq from "./components/Newbie/Faq";
+import Article from "./components/Newbie/Article";
 
-import Advicegen from "./Components/Junior/AdviceGen";
-import DevFinder from "./Components/Junior/DevFinder/DevFinder";
-import Newsletter from "./Components/Junior/Newsletter";
-import AgeCalculator from "./Components/Junior/AgeCalculator/AgeCalculator";
+import Advicegen from "./components/Junior/AdviceGen";
+import DevFinder from "./components/Junior/DevFinder/DevFinder";
+import Newsletter from "./components/Junior/Newsletter";
+import AgeCalculator from "./components/Junior/AgeCalculator/AgeCalculator";
 import Fylo from "./pages/fylo/FyloDark";
 import Blogr from "./pages/blogr/Blogr";
 
