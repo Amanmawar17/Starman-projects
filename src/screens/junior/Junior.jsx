@@ -1,11 +1,11 @@
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
-import fylodark from "../assets/fylodark.jpg";
-import advicegen from "../assets/advicegenpreview.jpg";
-import devfinder from "../assets/devfinderpreview.jpg";
-import blogr from "../assets/blogrpreview.jpg";
-import newsletter from "../assets/newsletter-desktop-preview.jpg";
-import age from "../assets/age.jpg";
+import fylodark from "../../assets/fylodark.jpg";
+import advicegen from "../../assets/advicegenpreview.jpg";
+import devfinder from "../../assets/devfinderpreview.jpg";
+import blogr from "../../assets/blogrpreview.jpg";
+import newsletter from "../../assets/newsletter-desktop-preview.jpg";
+import age from "../../assets/age.jpg";
 
 const JuniorData = [
   {

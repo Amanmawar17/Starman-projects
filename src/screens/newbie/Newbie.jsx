@@ -1,13 +1,13 @@
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
-import qrcode from "../assets/qrcode.jpg";
-import fourcard from "../assets/fourcardpreview.jpg";
-import baseapparel from "../assets/baseapparelpreview.jpg";
-import productreview from "../assets/product-desktop-preview.jpg";
-import results from "../assets/results-desktop-preview.jpg";
-import nftcard from "../assets/nft-card.jpg";
-import faq from "../assets/faq-preview.jpg";
-import article from "../assets/article-preview.jpg";
+import qrcode from "../../assets/qrcode.jpg";
+import fourcard from "../../assets/fourcardpreview.jpg";
+import baseapparel from "../../assets/baseapparelpreview.jpg";
+import productreview from "../../assets/product-desktop-preview.jpg";
+import results from "../../assets/results-desktop-preview.jpg";
+import nftcard from "../../assets/nft-card.jpg";
+import faq from "../../assets/faq-preview.jpg";
+import article from "../../assets/article-preview.jpg";
 
 const NewbieData = [
   {

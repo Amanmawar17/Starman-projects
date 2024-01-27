@@ -51,6 +51,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
+                placeholder="name"
                 className="text-[#010101] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-80 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 {...register("name", {
                   required: "Field cannot be empty",})}
@@ -93,7 +94,8 @@ const Contact = () => {
               <input
                 type="text"
                 id="message"
-                className="text-[#010101] block w-80 p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="hey!"
+                className="text-[#010101] block h-20 w-80 p-4 text-gray-900 border border-gray-300 rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 {...register("message", {
                   required: "Field cannot be empty",})}
                 required

@@ -1,7 +1,7 @@
 const Fourcard = () => {
   return (
     <>
-      <section className="bg-secondary h-screen grid place-items-center overflow-y-scroll no-scrollbar text-[#000] m-0 p-0">
+      <section className="bg-primary h-screen grid place-items-center overflow-y-scroll no-scrollbar text-[#000] m-0 p-0">
         <div className="text-center px-2 mx-auto max-w-sm lg:max-w-md">
           <h1 className="text-2xl p-2 lg:text-4xl">
             Reliable, efficient delivery <br />

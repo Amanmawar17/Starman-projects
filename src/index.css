@@ -17,24 +17,5 @@
     width: -webkit-fill-available;
     height: -webkit-fill-available;
   }
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #c8c8c8;
-    border-radius: 10px;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #2B3245;
-    border-radius: 10px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #374057;
-  }
+  
 }

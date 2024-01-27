@@ -3,16 +3,16 @@ import { FaBrain } from "react-icons/fa";
 
 export default function ResultsSummary() {
   return (
-    <div className="h-screen flex justify-center items-center bg-[#fff]">
+    <div className="h-screen flex justify-center items-center bg-primary">
       <div className="flex flex-col md:flex-row justify-center max-w-xs md:max-w-2xl items-center shadow-md">
         <div className="grid gap-1 md:gap-10 place-items-center p-6 rounded-3xl md:rounded-xl bg-gradient-to-b from-[#4e21ca] to-[#2e2be9] md:w-1/2 text-center text-[#c8c7ff] font-medium">
           <h3 className="text-base">Your Result</h3>
           <div className="flex flex-col justify-center items-center h-24 w-24 md:h-40 md:w-40 bg-[#2421ca] rounded-full place-items-center shadow-inner ">
-            <h1 className="text-3xl md:text-6xl text-[#fff] font-bold p-2 md:p-4">76</h1>
+            <h1 className="text-3xl md:text-6xl text-primary font-bold p-2 md:p-4">76</h1>
             <span className="text-sm">of 100</span>
           </div>
           <div className="text-center">
-            <h3 className="text-2xl text-[#fff] font-semibold p-2 md:p-4 ">
+            <h3 className="text-2xl text-primary font-semibold p-2 md:p-4 ">
               Great
             </h3>
             <p className="text-sm md:text-lg ">
@@ -56,7 +56,7 @@ export default function ResultsSummary() {
               <span className="text-[#303b5a]">72</span> / 100
             </div>
           </div>
-          <button className="bg-[#303b5a] p-3 rounded-3xl">Continue</button>
+          <button className="bg-[#303b5a] text-primary p-3 rounded-3xl">Continue</button>
         </div>
       </div>
     </div>

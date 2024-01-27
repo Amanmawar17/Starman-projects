@@ -1,46 +1,46 @@
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
 
-const DatabaseData = [
+const MiscellaneousData = [
   {
-    title: "MongoDB Database ",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "/database/mongodb",
-    code: "",
-    img: "",
-    tag: "av",
     id: 1,
-  },
-  {
-    title: "SQL Database",
+    title: "Open CV based Expression Detector",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
-    preview: "/database/sql-database",
+    preview: "/miscellaneous",
     code: "",
     img: "",
     tag: "av",
-    id: 2,
   },
   {
-    title: "Postgresql Database",
+    id: 2,
+    title: "Ethereum Based Smart Contract",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
+    preview: "/miscellaneous",
+    code: "",
+    img: "",
+    tag: "av",
+  },
+  {
+    id: 3,
+    title: "",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisl nec libero facilisis sollicitudin. Vestibulum eget tempus sapien.",
     preview: "",
     code: "",
     img: "",
     tag: "av",
-    id: 3,
   },
 ];
 
-export default function Database() {
+export default function Miscellaneous() {
   return (
     <>
       <div className="w-full min-h-screen py-10">
         <h1 className="text-3xl text-center text-secondary font-semibold">
-          <span className="text-hoverColor">Database</span> Project
+          <span className="text-hoverColor">Miscellaneous</span> Project
         </h1>
         <section className="my-10 px-10">
           <div className="grid grid-cols-1 gap-14 grid-flow-row md:grid-cols-2 lg:grid-cols-3">
-            {DatabaseData.map((item, index) => <Card details={item} key={index} />)}
+            {MiscellaneousData.map((item, index) => <Card details={item} key={index} />)}
           </div>
         </section>
       </div>

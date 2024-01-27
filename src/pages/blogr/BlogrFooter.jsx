@@ -5,7 +5,7 @@ import logo from "/blogr/logo.svg";
 const BlogrFooter = () => {
   return (
     <>
-      <section className="flex flex-col lg:flex-row justify-center items-center lg:h-[100vh] lg:pt-40 pb-20 p-8 bg-secondary">
+      <section className="flex flex-col lg:flex-row justify-center items-center lg:h-[100vh] lg:pt-40 pb-20 p-8 bg-primary">
         <div className="w-full lg:w-1/2 mb-5 grid place-content-center">
           <img src={lapdesktop} alt="" className="hidden lg:block" />
           <img src={lapmobile} alt="" className="lg:hidden" />

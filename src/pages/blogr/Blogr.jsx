@@ -10,11 +10,11 @@ import BlogrFooter from "./BlogrFooter";
 
 const Blogr = () => {
   return (
-    <div className="no-scrollbar text-secondary">
+    <div className="no-scrollbar text-primary">
       <BlogrNavbar />
       <section
         id="home"
-        className="bg-secondary "
+        className="bg-primary "
       >
         <div className="bg-[#ff525d] rounded-bl-[80px] h-[70vh] grid place-content-center overflow-hidden px-8 lg:px-20">
           <img
@@ -27,7 +27,7 @@ const Blogr = () => {
             alt=""
             className="hidden lg:block object-cover w-max z-10"
           />
-          <div className="text-center text-secondary flex flex-col justify-center items-center absolute top-1/4 lg:left-1/4 lg:w-1/2 p-3 z-20">
+          <div className="text-center text-primary flex flex-col justify-center items-center absolute top-1/4 lg:left-1/4 lg:w-1/2 p-3 z-20">
             <h1 className="text-4xl lg:text-5xl font-semibold">
               A modern publishing platform
             </h1>
@@ -35,10 +35,10 @@ const Blogr = () => {
               Grow your audience and build your online brand
             </p>
             <div className="flex font-semibold">
-              <button className="w-32 py-2 mr-4 rounded-3xl text-[#ff525d] bg-secondary hover:text-secondary hover:bg-[#ff525d]">
+              <button className="w-32 py-2 mr-4 rounded-3xl text-[#ff525d] bg-primary hover:text-primary hover:bg-[#ff525d]">
                 Start for Free
               </button>
-              <button className="w-32 py-2 rounded-3xl border border-secondary hover:bg-secondary hover:text-[#ff525d]">
+              <button className="w-32 py-2 rounded-3xl border border-primary hover:bg-primary hover:text-[#ff525d]">
                 Learn More
               </button>
             </div>
@@ -48,7 +48,7 @@ const Blogr = () => {
 
       <section
         id="design-for-the-future"
-        className="py-20 px-8 lg:pl-20 grid text-center overflow-x-hidden bg-secondary"
+        className="py-20 px-8 lg:pl-20 grid text-center overflow-x-hidden bg-primary"
       >
         <h3 className="text-[#1f3f5b] text-3xl lg:text-4xl font-semibold">
           Designer for the future
@@ -87,7 +87,7 @@ const Blogr = () => {
         </div>
       </section>
 
-      <div className="bg-secondary h-[100vh] lg:h-[90vh] py-5 lg:py-20">
+      <div className="bg-primary h-[100vh] lg:h-[90vh] py-5 lg:py-20">
         <section className="bg-gradient-to-br from-[#2c2d3f] to-[#3f4164] rounded-tr-[80px] rounded-bl-[80px] relative h-full">
           <img
             src={phones}

@@ -2,10 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./components/HomeSection/Home";
 import Contact from "./components/ContactSection/Contact";
-import Newbie from "./screens/Newbie";
-import Junior from "./screens/Junior";
-import Database from "./screens/Database";
-import Miscellaneous from "./screens/Miscellaneous";
+import Newbie from "./screens/newbie/Newbie";
+import Junior from "./screens/junior/Junior";
+import Database from "./screens/database/Database";
+import Miscellaneous from "./screens/miscellaneous/Miscellaneous";
 
 import NotFound from "./components/NotFound";
 

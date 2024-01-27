@@ -10,7 +10,7 @@ const NftCard = () => {
           alt="Product image"
           className="w-60 m-auto rounded-xl h-60"
         />
-        <div id="card-body" className="" >
+        <div id="card-body" className="text-primary" >
           <h1 className="mt-4 font-bold hover:text-[#00fff7]">Equilibrium #3429</h1>
           <p className="my-4 text-[#8bacda]">Our Equilibrium collection promotes balance and calm.</p>
           <div className="flex justify-between items-center mb-4">
@@ -25,7 +25,7 @@ const NftCard = () => {
               className="h-10 border-2 rounded-full"
             />
             <h3 className="ml-3 font-medium text-[#8bacda]">Creation of
-            <span className="text-secondary hover:text-[#00fff7]"> Jules Wyvern</span>
+            <span className="text-primary hover:text-[#00fff7]"> Jules Wyvern</span>
             </h3>
           </div>
         </div>
